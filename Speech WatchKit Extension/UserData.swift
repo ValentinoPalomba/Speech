@@ -17,9 +17,9 @@ final class UserData: ObservableObject {
     ]
     
     @Published var listElementsSaved = [
-        ListElementSaved(name: "Academy", timer: "2:00"),
-        ListElementSaved(name: "Presentazione", timer: "8:00"),
-        ListElementSaved(name: "TedX", timer: "18:00"),
-        ListElementSaved(name: "Speech", timer: "10:00")
+        ListElementSaved(name: "Academy", timerString: "2:00", timerDouble: 2.00),
+        ListElementSaved(name: "Presentazione", timerString: "8:00", timerDouble: 8.00),
+        ListElementSaved(name: "TedX", timerString: "18:00", timerDouble: 18.00),
+        ListElementSaved(name: "Speech", timerString: "10:00", timerDouble: 10.00)
     ]
 }

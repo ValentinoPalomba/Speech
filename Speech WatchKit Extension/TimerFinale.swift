@@ -17,6 +17,7 @@ struct TimerFinale: View {
     @State private var opacitySave = 0.0
     @State var ListaTimerModify = false
     @State var ListaTimerSelect = false
+    @State var isShowingAlert = false
     @EnvironmentObject var userData: UserData
     var body: some View {
         VStack {
@@ -51,7 +52,9 @@ struct TimerFinale: View {
                         }
                     }){
                         Text("Start")
-                    }.overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 2))
+                    }
+                    .overlay(RoundedRectangle (cornerRadius: 12)
+                        .stroke(Color.white, lineWidth: 2))
                     .fixedSize()
                     .opacity(opacityStart)
                 }
@@ -70,8 +73,8 @@ struct TimerFinale: View {
                 }
                 HStack{
                     Button(action: {
-                        self.userData.listElementsSaved.append(ListElementSaved(name: "Timer", timer: String(self.timeTimer)))
-                        print("SVAE")
+                        self.userData.listElementsSaved.append(ListElementSaved(name: "Timer", timerString: String(self.timeTimer), timerDouble: Double(self.timeTimer)))
+                        print("SAVE")
                         print(String(self.timeTimer))
                     }){
                         Text("Save")
@@ -91,23 +94,22 @@ struct TimerFinale: View {
                 }.frame(width: 0, height: 0, alignment: .bottom)
             }
         }.contextMenu(menuItems: {
-            
             Button(action: {}){
-                Text("Create a New Timer")
-            }.overlay(Circle().stroke(Color.white, lineWidth: 2))
-            
-            Button(action: {
-                self.ListaTimerModify = true
-                
-            }){
+                Text("Create a new timer")
+            }
+            .overlay(Circle().stroke(Color.white, lineWidth: 2))
+            NavigationLink(
+                destination: ListaTimerModifica().environmentObject(userData), isActive: $ListaTimerModify){
                 Text("Modify an existing timer")
-                
-            }.overlay(Circle().stroke(Color.white, lineWidth: 2))
+            }
+            .overlay(Circle().stroke(Color.white, lineWidth: 2))
+            
             Button(action: {
                 self.ListaTimerSelect = true
             }){
                 Text("Select an existing timer")
-            }.overlay(Circle().stroke(Color.white, lineWidth: 2))
+            }
+            .overlay(Circle().stroke(Color.white, lineWidth: 2))
             
             
         })
@@ -116,7 +118,14 @@ struct TimerFinale: View {
 
 struct TimerFinale_Previews: PreviewProvider {
     static var previews: some View {
-        TimerFinale()
-            .environmentObject(UserData())
+        Group{
+            TimerFinale()
+                .previewDevice("Apple Watch Series 6 - 44mm")
+                .environmentObject(UserData())
+            
+            TimerFinale()
+                .previewDevice("Apple Watch Series 6 - 40mm")
+                .environmentObject(UserData())
+        }
     }
 }

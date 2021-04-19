@@ -19,14 +19,12 @@ struct MilestonesView: View {
     @State private var opacitySet = 1.0
     @State private var blueCircleX = 45.0
     @State private var blueCircleY = 55.0
-    @State var redx=45+50*cos(360.0)
-    @State var redy=45+50*sin(360.0)
     var body: some View {
         VStack{
             VStack{
                 Text("Set the Milestones")
-                    .padding(.top)
-                    .padding(.bottom,10)
+                    .padding(.top,18)
+                    .padding(.bottom,9)
                 VStack{
                     Text("\(Int(Time))")
                         .focusable(true)
@@ -35,10 +33,7 @@ struct MilestonesView: View {
                             
                         }
                         .frame(width: 90, height: 90, alignment: .center)
-                        .overlay(Circle().stroke(Color.white, lineWidth: 3).frame(width: 100, height: 90, alignment: .center).position(x: 45, y: 45).overlay(Circle().stroke(Color.red).frame(width: 3, height: 3).position(x: CGFloat(self.redx), y: CGFloat(self.redy))).overlay(Circle()
-                                                                                                                                                                                                                                                                                        .trim(from: 0.0, to : CGFloat(Time / TimeDone)).stroke(Color.blue, style: StrokeStyle(lineWidth : 3, lineCap: .round, lineJoin: .round)).position(x: 45, y: 45).frame(width: 90, height: 90, alignment: .center)))
-                        .padding(.top, 5)
-                    
+                        .overlay(Circle().stroke(Color.white, lineWidth: 3).frame(width: 100, height: 90, alignment: .center).position(x: 45, y: 45).overlay(Circle().trim(from: 0.0, to : CGFloat(Time / TimeDone)).stroke(Color.blue, style: StrokeStyle(lineWidth : 3, lineCap: .round, lineJoin: .round)).position(x: 45, y: 45).frame(width: 90, height: 90, alignment: .center)))
                 }
             }
             
@@ -59,43 +54,37 @@ struct MilestonesView: View {
                         let notificationContent = UNMutableNotificationContent()
                         
                         // Add the content to the notification content
-                        notificationContent.title = "Sono passati \(self.Time) minuti"
+                        notificationContent.title = "Sono passati \(ceil((self.Time*100)/100)) minuti"
                         notificationContent.body = "Test body"
                         notificationContent.badge = NSNumber(value: 1)
                        
                         notificationContent.sound = UNNotificationSound.default
                         
                         // Add an attachment to the notification content
-                        if let url = Bundle.main.url(forResource: "dune",
-                                                     withExtension: "png") {
-                            if let attachment = try? UNNotificationAttachment(identifier: "dune",
-                                                                              url: url,
-                                                                              options: nil) {
+                        if let url = Bundle.main.url(forResource: "dune", withExtension: "png") {
+                            if let attachment = try? UNNotificationAttachment(identifier: "dune", url: url, options: nil) {
                                 notificationContent.attachments = [attachment]
                             }
                         }
                         
                         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.Time*60,repeats: false)
                         
-                        let request = UNNotificationRequest(identifier: UUID().uuidString,
-                                                            content: notificationContent,
-                                                            trigger: trigger)
+                        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
                         
-                       
                         NotificationArray.append(request)
                         print("Added at time \(self.Time)")
                         TimeSetted = true
-                        //                        self.setX = self.Time
-                        //                        self.setY = self.TimeDone
+                        //self.setX = self.Time
+                        //self.setY = self.TimeDone
                     }){
                         Text("Set")
                     }.opacity(opacitySet)
-                    .background(RoundedRectangle(cornerRadius: 12).foregroundColor(Color.blue)).opacity(opacitySet)
+                    .background(RoundedRectangle(cornerRadius: 12).foregroundColor(Color.blue)).opacity(opacitySet).frame(width: 70, height: 40, alignment: .center)
                     
                     NavigationLink(destination: ListaTimer(TimerLista: TimeDone).environmentObject(UserData())){
                         Text("Next")
                     }.opacity(opacityStart)
-                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 2)).opacity(opacityStart)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 2)).opacity(opacityStart).frame(width: 70, height: 40, alignment: .center)
                     
                     
                 }
@@ -108,9 +97,10 @@ struct MilestonesView_Previews: PreviewProvider {
     static var previews: some View {
         Group(){
             MilestonesView()
+                .previewDevice("Apple Watch Series 5 - 44mm")
             
-            ListaTimer()
-                .environmentObject(UserData())
+            MilestonesView()
+                .previewDevice("Apple Watch Series 5 - 40mm")
         }
     }
 }

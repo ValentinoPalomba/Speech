@@ -15,6 +15,7 @@ struct ListaTimerRow: View {
         VStack{
             TextField("Enter stop name", text: $element.description)
         }
+        .frame(width: 160, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).cornerRadius(12)
     }
 }
 

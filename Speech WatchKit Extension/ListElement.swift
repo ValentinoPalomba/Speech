@@ -8,15 +8,16 @@
 
 import SwiftUI
 
-struct ListElement: Hashable {
+struct ListElement: Hashable, Codable, Identifiable {
     var id = UUID()
     var description : String
     var isActive : Bool = false
 }
 
-struct ListElementSaved: Hashable {
+struct ListElementSaved: Hashable, Codable, Identifiable {
     var id = UUID()
     var name : String
-    var timer : String
+    var timerString : String
+    var timerDouble : Double
     var isActive : Bool = false
 }

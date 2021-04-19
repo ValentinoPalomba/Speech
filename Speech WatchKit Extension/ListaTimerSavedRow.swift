@@ -14,7 +14,7 @@ struct ListaTimerSavedRow: View {
         HStack{
             Text(element.name)
             Spacer()
-            Text(element.timer)
+            Text(element.timerString)
         }
     }
 }
