@@ -35,7 +35,12 @@ struct SaveTimerView: View {
                 TextField("", text: $timerString)
             }
             
-            Button(action: {}, label: {
+            Button(action: {
+                if self.name != "" && self.timerString != ""{
+                    UserDefaults.standard.set(self.name, forKey: "timerName")
+                    UserDefaults.standard.set(self.timerString, forKey: "timerString")
+                }
+            }, label: {
                 Text("Save")
             })
             .overlay(RoundedRectangle (cornerRadius: 12)

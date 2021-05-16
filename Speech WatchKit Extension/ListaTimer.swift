@@ -16,7 +16,7 @@ struct ListaTimer: View {
     @EnvironmentObject var userData: UserData
     var body: some View {
         VStack {
-            Text("Customize the Stops")
+            Text("Customize the stops")
                 .padding(.top, 20.0)
                 .padding(.bottom)
             VStack{
@@ -27,9 +27,6 @@ struct ListaTimer: View {
                 }
             }
             
-            
-            
-
             HStack {
                 NavigationLink(destination: TimerFinale(timeTimer: Int(TimerLista)).environmentObject(userData)){
                         Text("Skip")
