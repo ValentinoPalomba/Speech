@@ -3,70 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D49845E5262CAFC200F92AF2 /* SaveTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */; };
-		D4E3C9B323D9B664004D4E4A /* Speech WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4E3C9B923D9B664004D4E4A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9B723D9B664004D4E4A /* Interface.storyboard */; };
-		D4E3C9BB23D9B667004D4E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */; };
-		D4E3C9C223D9B667004D4E4A /* Speech WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4E3C9C723D9B667004D4E4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C623D9B667004D4E4A /* ContentView.swift */; };
-		D4E3C9C923D9B667004D4E4A /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C823D9B667004D4E4A /* HostingController.swift */; };
-		D4E3C9CB23D9B667004D4E4A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */; };
-		D4E3C9CD23D9B667004D4E4A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */; };
-		D4E3C9CF23D9B667004D4E4A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */; };
-		D4E3C9D123D9B667004D4E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D023D9B667004D4E4A /* Assets.xcassets */; };
-		D4E3C9D423D9B667004D4E4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */; };
-		D4E3C9E523D9B6F7004D4E4A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E423D9B6F7004D4E4A /* File.swift */; };
-		D4E3C9E723D9B725004D4E4A /* MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */; };
-		D4E3C9E923D9B755004D4E4A /* ListaTimerSelezione.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */; };
-		D4E3C9EB23D9B77B004D4E4A /* ListaTimerModifica.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */; };
-		D4E3C9ED23D9B79B004D4E4A /* ListaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */; };
-		D4E3C9EF23D9B80A004D4E4A /* ListaTimerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */; };
-		D4E3C9F123D9B834004D4E4A /* ListaTimerSavedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */; };
-		D4E3C9F323D9B859004D4E4A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F223D9B859004D4E4A /* UserData.swift */; };
-		D4E3C9F523D9B885004D4E4A /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F423D9B885004D4E4A /* ListElement.swift */; };
-		D4E3C9F723D9B8A4004D4E4A /* TimerFinale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */; };
+		A98783422F1062FA00A5AC02 /* Speech Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A98783412F1062FA00A5AC02 /* Speech Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4E3C9B423D9B664004D4E4A /* PBXContainerItemProxy */ = {
+		A98783432F1062FA00A5AC02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4E3C9A823D9B664004D4E4A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4E3C9B123D9B664004D4E4A;
-			remoteInfo = "Speech WatchKit App";
-		};
-		D4E3C9C323D9B667004D4E4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E3C9A823D9B664004D4E4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4E3C9C023D9B667004D4E4A;
-			remoteInfo = "Speech WatchKit Extension";
+			remoteGlobalIDString = A98783402F1062FA00A5AC02;
+			remoteInfo = "Speech Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D4E3C9DC23D9B667004D4E4A /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				D4E3C9C223D9B667004D4E4A /* Speech WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4E3C9E023D9B667004D4E4A /* Embed Watch Content */ = {
+		A987834F2F1062FA00A5AC02 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				D4E3C9B323D9B664004D4E4A /* Speech WatchKit App.app in Embed Watch Content */,
+				A98783422F1062FA00A5AC02 /* Speech Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,36 +35,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTimerView.swift; sourceTree = "<group>"; };
-		D4E3C9AE23D9B664004D4E4A /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9B823D9B664004D4E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4E3C9BC23D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Speech WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9C623D9B667004D4E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D4E3C9C823D9B667004D4E4A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		D4E3C9D023D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4E3C9D523D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D4E3C9E423D9B6F7004D4E4A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonesView.swift; sourceTree = "<group>"; };
-		D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerSelezione.swift; sourceTree = "<group>"; };
-		D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerModifica.swift; sourceTree = "<group>"; };
-		D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimer.swift; sourceTree = "<group>"; };
-		D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerRow.swift; sourceTree = "<group>"; };
-		D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerSavedRow.swift; sourceTree = "<group>"; };
-		D4E3C9F223D9B859004D4E4A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		D4E3C9F423D9B885004D4E4A /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElement.swift; sourceTree = "<group>"; };
-		D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFinale.swift; sourceTree = "<group>"; };
+		A98783352F1062F900A5AC02 /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98783412F1062FA00A5AC02 /* Speech Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A98783362F1062F900A5AC02 /* Speech */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Speech; sourceTree = "<group>"; };
+		A98783452F1062FA00A5AC02 /* Speech Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Speech Watch App"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
-		D4E3C9BE23D9B667004D4E4A /* Frameworks */ = {
+		A98783322F1062F900A5AC02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A987833E2F1062FA00A5AC02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,8 +65,8 @@
 		D4E3C9A723D9B664004D4E4A = {
 			isa = PBXGroup;
 			children = (
-				D4E3C9B623D9B664004D4E4A /* Speech WatchKit App */,
-				D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */,
+				A98783362F1062F900A5AC02 /* Speech */,
+				A98783452F1062FA00A5AC02 /* Speech Watch App */,
 				D4E3C9AF23D9B664004D4E4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,111 +74,60 @@
 		D4E3C9AF23D9B664004D4E4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4E3C9AE23D9B664004D4E4A /* Speech.app */,
-				D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */,
-				D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */,
+				A98783352F1062F900A5AC02 /* Speech.app */,
+				A98783412F1062FA00A5AC02 /* Speech Watch App.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D4E3C9B623D9B664004D4E4A /* Speech WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				D4E3C9B723D9B664004D4E4A /* Interface.storyboard */,
-				D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */,
-				D4E3C9BC23D9B667004D4E4A /* Info.plist */,
-			);
-			path = "Speech WatchKit App";
-			sourceTree = "<group>";
-		};
-		D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D4E3C9E423D9B6F7004D4E4A /* File.swift */,
-				D4E3C9C623D9B667004D4E4A /* ContentView.swift */,
-				D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */,
-				D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */,
-				D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */,
-				D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */,
-				D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */,
-				D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */,
-				D4E3C9F223D9B859004D4E4A /* UserData.swift */,
-				D4E3C9F423D9B885004D4E4A /* ListElement.swift */,
-				D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */,
-				D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */,
-				D4E3C9C823D9B667004D4E4A /* HostingController.swift */,
-				D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */,
-				D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */,
-				D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */,
-				D4E3C9D023D9B667004D4E4A /* Assets.xcassets */,
-				D4E3C9D523D9B667004D4E4A /* Info.plist */,
-				D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */,
-				D4E3C9D223D9B667004D4E4A /* Preview Content */,
-			);
-			path = "Speech WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		D4E3C9D223D9B667004D4E4A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4E3C9AD23D9B664004D4E4A /* Speech */ = {
+		A98783342F1062F900A5AC02 /* Speech */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4E3C9E123D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech" */;
+			buildConfigurationList = A98783502F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech" */;
 			buildPhases = (
-				D4E3C9AC23D9B664004D4E4A /* Resources */,
-				D4E3C9E023D9B667004D4E4A /* Embed Watch Content */,
+				A98783312F1062F900A5AC02 /* Sources */,
+				A98783322F1062F900A5AC02 /* Frameworks */,
+				A98783332F1062F900A5AC02 /* Resources */,
+				A987834F2F1062FA00A5AC02 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4E3C9B523D9B664004D4E4A /* PBXTargetDependency */,
+				A98783442F1062FA00A5AC02 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A98783362F1062F900A5AC02 /* Speech */,
 			);
 			name = Speech;
+			packageProductDependencies = (
+			);
 			productName = Speech;
-			productReference = D4E3C9AE23D9B664004D4E4A /* Speech.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
+			productReference = A98783352F1062F900A5AC02 /* Speech.app */;
+			productType = "com.apple.product-type.application";
 		};
-		D4E3C9B123D9B664004D4E4A /* Speech WatchKit App */ = {
+		A98783402F1062FA00A5AC02 /* Speech Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4E3C9DD23D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech WatchKit App" */;
+			buildConfigurationList = A987834C2F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech Watch App" */;
 			buildPhases = (
-				D4E3C9B023D9B664004D4E4A /* Resources */,
-				D4E3C9DC23D9B667004D4E4A /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4E3C9C423D9B667004D4E4A /* PBXTargetDependency */,
-			);
-			name = "Speech WatchKit App";
-			productName = "Speech WatchKit App";
-			productReference = D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		D4E3C9C023D9B667004D4E4A /* Speech WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4E3C9D923D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech WatchKit Extension" */;
-			buildPhases = (
-				D4E3C9BD23D9B667004D4E4A /* Sources */,
-				D4E3C9BE23D9B667004D4E4A /* Frameworks */,
-				D4E3C9BF23D9B667004D4E4A /* Resources */,
+				A987833D2F1062FA00A5AC02 /* Sources */,
+				A987833E2F1062FA00A5AC02 /* Frameworks */,
+				A987833F2F1062FA00A5AC02 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Speech WatchKit Extension";
-			productName = "Speech WatchKit Extension";
-			productReference = D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			fileSystemSynchronizedGroups = (
+				A98783452F1062FA00A5AC02 /* Speech Watch App */,
+			);
+			name = "Speech Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Speech Watch App";
+			productReference = A98783412F1062FA00A5AC02 /* Speech Watch App.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -237,18 +135,15 @@
 		D4E3C9A823D9B664004D4E4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Girolamo Pinto";
 				TargetAttributes = {
-					D4E3C9AD23D9B664004D4E4A = {
-						CreatedOnToolsVersion = 11.3;
+					A98783342F1062F900A5AC02 = {
+						CreatedOnToolsVersion = 26.2;
 					};
-					D4E3C9B123D9B664004D4E4A = {
-						CreatedOnToolsVersion = 11.3;
-					};
-					D4E3C9C023D9B667004D4E4A = {
-						CreatedOnToolsVersion = 11.3;
+					A98783402F1062FA00A5AC02 = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
@@ -265,92 +160,207 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4E3C9AD23D9B664004D4E4A /* Speech */,
-				D4E3C9B123D9B664004D4E4A /* Speech WatchKit App */,
-				D4E3C9C023D9B667004D4E4A /* Speech WatchKit Extension */,
+				A98783342F1062F900A5AC02 /* Speech */,
+				A98783402F1062FA00A5AC02 /* Speech Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D4E3C9AC23D9B664004D4E4A /* Resources */ = {
+		A98783332F1062F900A5AC02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4E3C9B023D9B664004D4E4A /* Resources */ = {
+		A987833F2F1062FA00A5AC02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E3C9BB23D9B667004D4E4A /* Assets.xcassets in Resources */,
-				D4E3C9B923D9B664004D4E4A /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4E3C9BF23D9B667004D4E4A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4E3C9D423D9B667004D4E4A /* Preview Assets.xcassets in Resources */,
-				D4E3C9D123D9B667004D4E4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D4E3C9BD23D9B667004D4E4A /* Sources */ = {
+		A98783312F1062F900A5AC02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E3C9F323D9B859004D4E4A /* UserData.swift in Sources */,
-				D4E3C9EB23D9B77B004D4E4A /* ListaTimerModifica.swift in Sources */,
-				D4E3C9E923D9B755004D4E4A /* ListaTimerSelezione.swift in Sources */,
-				D4E3C9C923D9B667004D4E4A /* HostingController.swift in Sources */,
-				D4E3C9F723D9B8A4004D4E4A /* TimerFinale.swift in Sources */,
-				D4E3C9EF23D9B80A004D4E4A /* ListaTimerRow.swift in Sources */,
-				D4E3C9F123D9B834004D4E4A /* ListaTimerSavedRow.swift in Sources */,
-				D4E3C9E523D9B6F7004D4E4A /* File.swift in Sources */,
-				D4E3C9C723D9B667004D4E4A /* ContentView.swift in Sources */,
-				D49845E5262CAFC200F92AF2 /* SaveTimerView.swift in Sources */,
-				D4E3C9CD23D9B667004D4E4A /* NotificationController.swift in Sources */,
-				D4E3C9CB23D9B667004D4E4A /* ExtensionDelegate.swift in Sources */,
-				D4E3C9F523D9B885004D4E4A /* ListElement.swift in Sources */,
-				D4E3C9CF23D9B667004D4E4A /* NotificationView.swift in Sources */,
-				D4E3C9E723D9B725004D4E4A /* MilestonesView.swift in Sources */,
-				D4E3C9ED23D9B79B004D4E4A /* ListaTimer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A987833D2F1062FA00A5AC02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4E3C9B523D9B664004D4E4A /* PBXTargetDependency */ = {
+		A98783442F1062FA00A5AC02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4E3C9B123D9B664004D4E4A /* Speech WatchKit App */;
-			targetProxy = D4E3C9B423D9B664004D4E4A /* PBXContainerItemProxy */;
-		};
-		D4E3C9C423D9B667004D4E4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4E3C9C023D9B667004D4E4A /* Speech WatchKit Extension */;
-			targetProxy = D4E3C9C323D9B667004D4E4A /* PBXContainerItemProxy */;
+			target = A98783402F1062FA00A5AC02 /* Speech Watch App */;
+			targetProxy = A98783432F1062FA00A5AC02 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		D4E3C9B723D9B664004D4E4A /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4E3C9B823D9B664004D4E4A /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		A987834D2F1062FA00A5AC02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = valentinopalomba.Speech;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		A987834E2F1062FA00A5AC02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = valentinopalomba.Speech;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		A98783512F1062FA00A5AC02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A98783522F1062FA00A5AC02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D4E3C9D723D9B667004D4E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -467,153 +477,32 @@
 			};
 			name = Release;
 		};
-		D4E3C9DA23D9B667004D4E4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Speech WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		D4E3C9DB23D9B667004D4E4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Speech WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		D4E3C9DE23D9B667004D4E4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				IBSC_MODULE = Speech_WatchKit_Extension;
-				INFOPLIST_FILE = "Speech WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		D4E3C9DF23D9B667004D4E4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				IBSC_MODULE = Speech_WatchKit_Extension;
-				INFOPLIST_FILE = "Speech WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		D4E3C9E223D9B667004D4E4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		D4E3C9E323D9B667004D4E4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K2863FX4G2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A987834C2F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A987834D2F1062FA00A5AC02 /* Debug */,
+				A987834E2F1062FA00A5AC02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98783502F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98783512F1062FA00A5AC02 /* Debug */,
+				A98783522F1062FA00A5AC02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4E3C9AB23D9B664004D4E4A /* Build configuration list for PBXProject "Speech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4E3C9D723D9B667004D4E4A /* Debug */,
 				D4E3C9D823D9B667004D4E4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4E3C9D923D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4E3C9DA23D9B667004D4E4A /* Debug */,
-				D4E3C9DB23D9B667004D4E4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4E3C9DD23D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4E3C9DE23D9B667004D4E4A /* Debug */,
-				D4E3C9DF23D9B667004D4E4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4E3C9E123D9B667004D4E4A /* Build configuration list for PBXNativeTarget "Speech" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4E3C9E223D9B667004D4E4A /* Debug */,
-				D4E3C9E323D9B667004D4E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
