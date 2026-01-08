@@ -7,28 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D49845E5262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */; };
+		D49845E5262CAFC200F92AF2 /* Sources/Features/SavedTimers/SaveTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49845E4262CAFC200F92AF2 /* Sources/Features/SavedTimers/SaveTimerView.swift */; };
+		FF3EB7DD206C43C4A65BC0AE /* Sources/Domain/Models/Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C546A5B8011046FD9F726AB4 /* Milestone.swift */; };
+		ED32327F5DB945BBA006B57C /* Sources/Domain/Models/SavedTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B5DF6568D48C8B0980BB1 /* SavedTimer.swift */; };
+		C45C0563DEA940CF9145B751 /* Sources/Domain/Repositories/SavedTimersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FF673D45148088FA9377A /* SavedTimersRepository.swift */; };
+		6BBB41EA70604FA494D44C12 /* Sources/Domain/Services/TimerNotificationScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC5CC91BA74CE3A37EFB37 /* TimerNotificationScheduling.swift */; };
+		47FB047B281E44DE826C0487 /* Sources/Data/Persistence/UserDefaultsSavedTimersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E080BEC4964B4888DCDB92 /* UserDefaultsSavedTimersRepository.swift */; };
+		291C52604982448EAB91E895 /* Sources/Data/Notifications/UserNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CD98134694E11902CBBC0 /* UserNotificationScheduler.swift */; };
+		374FA68958E6467AB6401623 /* Sources/App/AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BB4EF6E024D3F9DD23066 /* AppRoute.swift */; };
+		A6A8A52C41564F1490EB7288 /* Sources/App/AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44116235B534BB997202838 /* AppNavigationModel.swift */; };
+		23111C822B534B17AB71B4F1 /* Sources/App/AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8A32DA03441DDAAE575BB /* AppRootView.swift */; };
+		CB1F969C996641CA922AD25C /* Sources/App/State/SavedTimersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7FC389580B4F1986308172 /* SavedTimersModel.swift */; };
+		548365AAD44C491B801CF2D0 /* Sources/App/State/TimerSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11368198A27E479B8AE8626C /* TimerSessionModel.swift */; };
 		D4E3C9B323D9B664004D4E4A /* Speech WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4E3C9B923D9B664004D4E4A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9B723D9B664004D4E4A /* Interface.storyboard */; };
 		D4E3C9BB23D9B667004D4E4A /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9BA23D9B667004D4E4A /* Resources/Assets.xcassets */; };
 		D4E3C9C223D9B667004D4E4A /* Speech WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4E3C9C723D9B667004D4E4A /* Sources/Views/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */; };
+		D4E3C9C723D9B667004D4E4A /* Sources/Features/TimerSetup/TimerSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C623D9B667004D4E4A /* Sources/Features/TimerSetup/TimerSetupView.swift */; };
 		D4E3C9C923D9B667004D4E4A /* Sources/App/HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */; };
 		D4E3C9CB23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */; };
 		D4E3C9CD23D9B667004D4E4A /* Sources/App/NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */; };
-		D4E3C9CF23D9B667004D4E4A /* Sources/Views/NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */; };
+		D4E3C9CF23D9B667004D4E4A /* Sources/App/Notification/NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CE23D9B667004D4E4A /* Sources/App/Notification/NotificationView.swift */; };
 		D4E3C9D123D9B667004D4E4A /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */; };
 		D4E3C9D423D9B667004D4E4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */; };
-		D4E3C9E523D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */; };
-		D4E3C9E723D9B725004D4E4A /* Sources/Views/MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */; };
-		D4E3C9E923D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */; };
-		D4E3C9EB23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */; };
-		D4E3C9ED23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */; };
-		D4E3C9EF23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */; };
-		D4E3C9F123D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */; };
-		D4E3C9F323D9B859004D4E4A /* Sources/Models/UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */; };
-		D4E3C9F523D9B885004D4E4A /* Sources/Models/ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */; };
-		D4E3C9F723D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */; };
+		D4E3C9E723D9B725004D4E4A /* Sources/Features/Milestones/MilestoneSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E623D9B725004D4E4A /* Sources/Features/Milestones/MilestoneSetupView.swift */; };
+		D4E3C9E923D9B755004D4E4A /* Sources/Features/SavedTimers/SavedTimersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E823D9B755004D4E4A /* Sources/Features/SavedTimers/SavedTimersListView.swift */; };
+		D4E3C9EB23D9B77B004D4E4A /* Sources/Features/SavedTimers/SavedTimersManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EA23D9B77B004D4E4A /* Sources/Features/SavedTimers/SavedTimersManageView.swift */; };
+		D4E3C9EF23D9B80A004D4E4A /* Sources/Features/Milestones/MilestoneRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EE23D9B80A004D4E4A /* Sources/Features/Milestones/MilestoneRowView.swift */; };
+		D4E3C9F123D9B834004D4E4A /* Sources/Features/SavedTimers/SavedTimerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F023D9B834004D4E4A /* Sources/Features/SavedTimers/SavedTimerRowView.swift */; };
+		D4E3C9F723D9B8A4004D4E4A /* Sources/Features/TimerRun/TimerRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F623D9B8A4004D4E4A /* Sources/Features/TimerRun/TimerRunView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,33 +81,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A98783302F104CF300A5AC02 /* AGENTS.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGENTS.md; sourceTree = "<group>"; };
-		D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/SaveTimerView.swift; sourceTree = "<group>"; };
+		11368198A27E479B8AE8626C /* TimerSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSessionModel.swift; sourceTree = "<group>"; };
+		41E8A32DA03441DDAAE575BB /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		523B5DF6568D48C8B0980BB1 /* SavedTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimer.swift; sourceTree = "<group>"; };
+		61E080BEC4964B4888DCDB92 /* UserDefaultsSavedTimersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSavedTimersRepository.swift; sourceTree = "<group>"; };
+		626FF673D45148088FA9377A /* SavedTimersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimersRepository.swift; sourceTree = "<group>"; };
+		8E8CD98134694E11902CBBC0 /* UserNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationScheduler.swift; sourceTree = "<group>"; };
+		BD7FC389580B4F1986308172 /* SavedTimersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimersModel.swift; sourceTree = "<group>"; };
+		C44116235B534BB997202838 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
+		C546A5B8011046FD9F726AB4 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		F3BC5CC91BA74CE3A37EFB37 /* TimerNotificationScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationScheduling.swift; sourceTree = "<group>"; };
+		F89BB4EF6E024D3F9DD23066 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTimerView.swift; sourceTree = "<group>"; };
 		D4E3C9AE23D9B664004D4E4A /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E3C9B823D9B664004D4E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D4E3C9BA23D9B667004D4E4A /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		D4E3C9BC23D9B667004D4E4A /* Resources/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
 		D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Speech WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ContentView.swift; sourceTree = "<group>"; };
-		D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/HostingController.swift; sourceTree = "<group>"; };
-		D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/NotificationController.swift; sourceTree = "<group>"; };
-		D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/NotificationView.swift; sourceTree = "<group>"; };
-		D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		D4E3C9C623D9B667004D4E4A /* TimerSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSetupView.swift; sourceTree = "<group>"; };
+		D4E3C9C823D9B667004D4E4A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D4E3C9D023D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4E3C9D523D9B667004D4E4A /* Resources/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
-		D4E3C9D623D9B667004D4E4A /* Resources/PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources/PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/AppGlobals.swift; sourceTree = "<group>"; };
-		D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/MilestonesView.swift; sourceTree = "<group>"; };
-		D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerSelezioneView.swift; sourceTree = "<group>"; };
-		D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerModificaView.swift; sourceTree = "<group>"; };
-		D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerView.swift; sourceTree = "<group>"; };
-		D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerRowView.swift; sourceTree = "<group>"; };
-		D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerSavedRowView.swift; sourceTree = "<group>"; };
-		D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/UserData.swift; sourceTree = "<group>"; };
-		D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/ListElement.swift; sourceTree = "<group>"; };
-		D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/TimerFinaleView.swift; sourceTree = "<group>"; };
+		D4E3C9D523D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D4E3C9E623D9B725004D4E4A /* MilestoneSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneSetupView.swift; sourceTree = "<group>"; };
+		D4E3C9E823D9B755004D4E4A /* SavedTimersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimersListView.swift; sourceTree = "<group>"; };
+		D4E3C9EA23D9B77B004D4E4A /* SavedTimersManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimersManageView.swift; sourceTree = "<group>"; };
+		D4E3C9EE23D9B80A004D4E4A /* MilestoneRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F023D9B834004D4E4A /* SavedTimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTimerRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F623D9B8A4004D4E4A /* TimerRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRunView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +130,6 @@
 		D4E3C9A723D9B664004D4E4A = {
 			isa = PBXGroup;
 			children = (
-				A98783302F104CF300A5AC02 /* AGENTS.md */,
 				D4E3C9B623D9B664004D4E4A /* Speech WatchKit App */,
 				D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */,
 				D4E3C9AF23D9B664004D4E4A /* Products */,
@@ -147,36 +159,179 @@
 		D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */,
-				D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */,
-				D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */,
-				D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */,
-				D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */,
-				D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */,
-				D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */,
-				D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */,
-				D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */,
-				D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */,
-				D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */,
-				D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */,
-				D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */,
-				D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */,
-				D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */,
-				D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */,
-				D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */,
-				D4E3C9D523D9B667004D4E4A /* Resources/Info.plist */,
-				D4E3C9D623D9B667004D4E4A /* Resources/PushNotificationPayload.apns */,
-				D4E3C9D223D9B667004D4E4A /* Resources/Preview Content */,
+				3110DA2527624631B5AD71EE /* Sources */,
+				2D7B7962DFA6442F80C7B2D2 /* Resources */,
 			);
 			path = "Speech WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		D4E3C9D223D9B667004D4E4A /* Resources/Preview Content */ = {
+		3110DA2527624631B5AD71EE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BBA81E2E922C4F84A4D630ED /* App */,
+				38893CBEAEDC48A38EA79404 /* Features */,
+				C9B7439ADE5843409FFB64EF /* Data */,
+				037E2C4C5D944671BA9F9FD1 /* Domain */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BBA81E2E922C4F84A4D630ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				41E8A32DA03441DDAAE575BB /* AppRootView.swift */,
+				F89BB4EF6E024D3F9DD23066 /* AppRoute.swift */,
+				C44116235B534BB997202838 /* AppNavigationModel.swift */,
+				503630E0D99742B4A96D3D8E /* State */,
+				D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */,
+				D4E3C9C823D9B667004D4E4A /* HostingController.swift */,
+				D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */,
+				A1F04F2CCCEB4905A2DAFE6B /* Notification */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		503630E0D99742B4A96D3D8E /* State */ = {
+			isa = PBXGroup;
+			children = (
+				BD7FC389580B4F1986308172 /* SavedTimersModel.swift */,
+				11368198A27E479B8AE8626C /* TimerSessionModel.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A1F04F2CCCEB4905A2DAFE6B /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		38893CBEAEDC48A38EA79404 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A65FDC9C4411E8F2F98F7 /* TimerSetup */,
+				75244628C4C24A038A6A19BD /* Milestones */,
+				D44E26FFEA3B427CBED7080E /* TimerRun */,
+				8639AAF07E384206A7902D76 /* SavedTimers */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BC0A65FDC9C4411E8F2F98F7 /* TimerSetup */ = {
+			isa = PBXGroup;
+			children = (
+				D4E3C9C623D9B667004D4E4A /* TimerSetupView.swift */,
+			);
+			path = TimerSetup;
+			sourceTree = "<group>";
+		};
+		75244628C4C24A038A6A19BD /* Milestones */ = {
+			isa = PBXGroup;
+			children = (
+				D4E3C9E623D9B725004D4E4A /* MilestoneSetupView.swift */,
+				D4E3C9EE23D9B80A004D4E4A /* MilestoneRowView.swift */,
+			);
+			path = Milestones;
+			sourceTree = "<group>";
+		};
+		D44E26FFEA3B427CBED7080E /* TimerRun */ = {
+			isa = PBXGroup;
+			children = (
+				D4E3C9F623D9B8A4004D4E4A /* TimerRunView.swift */,
+			);
+			path = TimerRun;
+			sourceTree = "<group>";
+		};
+		8639AAF07E384206A7902D76 /* SavedTimers */ = {
+			isa = PBXGroup;
+			children = (
+				D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */,
+				D4E3C9E823D9B755004D4E4A /* SavedTimersListView.swift */,
+				D4E3C9EA23D9B77B004D4E4A /* SavedTimersManageView.swift */,
+				D4E3C9F023D9B834004D4E4A /* SavedTimerRowView.swift */,
+			);
+			path = SavedTimers;
+			sourceTree = "<group>";
+		};
+		C9B7439ADE5843409FFB64EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				840BD244EF1D4C15B3871612 /* Notifications */,
+				3FE050F0525D43308438F496 /* Persistence */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		840BD244EF1D4C15B3871612 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				8E8CD98134694E11902CBBC0 /* UserNotificationScheduler.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		3FE050F0525D43308438F496 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				61E080BEC4964B4888DCDB92 /* UserDefaultsSavedTimersRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		037E2C4C5D944671BA9F9FD1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C0320A480DAB49DA997E753C /* Models */,
+				0E9B3D72C52545948FADF114 /* Repositories */,
+				6163C4C8F28442179BE7D461 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C0320A480DAB49DA997E753C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C546A5B8011046FD9F726AB4 /* Milestone.swift */,
+				523B5DF6568D48C8B0980BB1 /* SavedTimer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E9B3D72C52545948FADF114 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				626FF673D45148088FA9377A /* SavedTimersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6163C4C8F28442179BE7D461 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F3BC5CC91BA74CE3A37EFB37 /* TimerNotificationScheduling.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2D7B7962DFA6442F80C7B2D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4E3C9D023D9B667004D4E4A /* Assets.xcassets */,
+				D4E3C9D523D9B667004D4E4A /* Info.plist */,
+				D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */,
+				D4E3C9D223D9B667004D4E4A /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4E3C9D223D9B667004D4E4A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 				D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */,
 			);
-			path = "Resources/Preview Content";
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,22 +462,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E3C9F323D9B859004D4E4A /* Sources/Models/UserData.swift in Sources */,
+				23111C822B534B17AB71B4F1 /* Sources/App/AppRootView.swift in Sources */,
+				374FA68958E6467AB6401623 /* Sources/App/AppRoute.swift in Sources */,
+				A6A8A52C41564F1490EB7288 /* Sources/App/AppNavigationModel.swift in Sources */,
+				CB1F969C996641CA922AD25C /* Sources/App/State/SavedTimersModel.swift in Sources */,
+				548365AAD44C491B801CF2D0 /* Sources/App/State/TimerSessionModel.swift in Sources */,
+				FF3EB7DD206C43C4A65BC0AE /* Sources/Domain/Models/Milestone.swift in Sources */,
+				ED32327F5DB945BBA006B57C /* Sources/Domain/Models/SavedTimer.swift in Sources */,
+				C45C0563DEA940CF9145B751 /* Sources/Domain/Repositories/SavedTimersRepository.swift in Sources */,
+				6BBB41EA70604FA494D44C12 /* Sources/Domain/Services/TimerNotificationScheduling.swift in Sources */,
+				47FB047B281E44DE826C0487 /* Sources/Data/Persistence/UserDefaultsSavedTimersRepository.swift in Sources */,
+				291C52604982448EAB91E895 /* Sources/Data/Notifications/UserNotificationScheduler.swift in Sources */,
 				D4E3C9EB23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift in Sources */,
 				D4E3C9E923D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift in Sources */,
 				D4E3C9C923D9B667004D4E4A /* Sources/App/HostingController.swift in Sources */,
 				D4E3C9F723D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift in Sources */,
 				D4E3C9EF23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift in Sources */,
 				D4E3C9F123D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift in Sources */,
-				D4E3C9E523D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift in Sources */,
 				D4E3C9C723D9B667004D4E4A /* Sources/Views/ContentView.swift in Sources */,
 				D49845E5262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift in Sources */,
 				D4E3C9CD23D9B667004D4E4A /* Sources/App/NotificationController.swift in Sources */,
 				D4E3C9CB23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift in Sources */,
-				D4E3C9F523D9B885004D4E4A /* Sources/Models/ListElement.swift in Sources */,
 				D4E3C9CF23D9B667004D4E4A /* Sources/Views/NotificationView.swift in Sources */,
 				D4E3C9E723D9B725004D4E4A /* Sources/Views/MilestonesView.swift in Sources */,
-				D4E3C9ED23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -459,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -487,9 +649,9 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -511,9 +673,9 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -530,9 +692,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -549,9 +711,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -564,7 +726,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 			};
 			name = Debug;
 		};
@@ -577,7 +739,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.2;
 			};
 			name = Release;
 		};
