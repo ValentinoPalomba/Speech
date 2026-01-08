@@ -1,5 +1,5 @@
 //
-//  ListaTimerModifica.swift
+//  ListaTimerModificaView.swift
 //  Speech WatchKit Extension
 //
 //  Created by Valentino Palomba on 23/01/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ListaTimerModifica: View {
+struct ListaTimerModificaView: View {
     @EnvironmentObject var userData: UserData
     var body: some View {
         VStack {
@@ -20,19 +20,19 @@ struct ListaTimerModifica: View {
                 Text("Edit timer").font(.system(size: 30.0)).frame(width: 180.0, height: 10.0).padding(.top)
             }
             List(userData.listElementsSaved){ element in
-                ListaTimerSavedRow(element: element)
+                ListaTimerSavedRowView(element: element)
             }
         }
     }
 }
 
-struct ListaTimerModifica_Previews: PreviewProvider {
+struct ListaTimerModificaView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            ListaTimerModifica()
+            ListaTimerModificaView()
                 .previewDevice("Apple Watch Series 6 - 44mm")
             
-            ListaTimerModifica()
+            ListaTimerModificaView()
                 .previewDevice("Apple Watch Series 6 - 40mm")
         }
         .environmentObject(UserData())

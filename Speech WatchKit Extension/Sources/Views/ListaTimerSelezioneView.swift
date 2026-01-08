@@ -1,5 +1,5 @@
 //
-//  ListaTimerSelezione.swift
+//  ListaTimerSelezioneView.swift
 //  Speech WatchKit Extension
 //
 //  Created by Valentino Palomba on 23/01/2020.
@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct ListaTimerSelezione: View {
+struct ListaTimerSelezioneView: View {
     @EnvironmentObject var userData: UserData
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct ListaTimerSelezione: View {
             List(self.userData.listElementsSaved, id: \.id){ element in
                 NavigationLink(
                     destination: MilestonesView(TimeDone: element.timerDouble)){
-                    ListaTimerSavedRow(element: element)
+                    ListaTimerSavedRowView(element: element)
                 }
             }
         }
@@ -30,13 +30,13 @@ struct ListaTimerSelezione: View {
     }
 }
 
-struct ListaTimerSelezione_Previews: PreviewProvider {
+struct ListaTimerSelezioneView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            ListaTimerSelezione()
+            ListaTimerSelezioneView()
                 .previewDevice("Apple Watch Series 5 - 44mm")
             
-            ListaTimerSelezione()
+            ListaTimerSelezioneView()
                 .previewDevice("Apple Watch Series 5 - 40mm")
         }
         .environmentObject(UserData())

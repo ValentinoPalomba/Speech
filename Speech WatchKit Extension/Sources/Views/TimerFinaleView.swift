@@ -1,5 +1,5 @@
 //
-//  TimerFinale.swift
+//  TimerFinaleView.swift
 //  Speech WatchKit Extension
 //
 //  Created by Valentino Palomba on 23/01/2020.
@@ -10,7 +10,7 @@ import SwiftUI
 import UserNotifications
 import Combine
 
-struct TimerFinale: View {
+struct TimerFinaleView: View {
     @State var timeTimer = 0
     @State private var opacityStart = 1.0
     @State private var opacityStop = 0.0
@@ -82,11 +82,11 @@ struct TimerFinale: View {
                 }.opacity(opacitySave)
                 
                 HStack {
-                    NavigationLink(destination: ListaTimerModifica(), isActive: $ListaTimerModify){
+                    NavigationLink(destination: ListaTimerModificaView(), isActive: $ListaTimerModify){
                         Text("modify")
                     }.hidden()
                     .frame(width: 0, height: 0, alignment: .bottom)
-                    NavigationLink(destination: ListaTimerSelezione().environmentObject(userData), isActive: $ListaTimerSelect){
+                    NavigationLink(destination: ListaTimerSelezioneView().environmentObject(userData), isActive: $ListaTimerSelect){
                         Text("Select")
                     }.hidden()
                     .frame(width: 0, height: 0, alignment: .bottom)
@@ -99,7 +99,7 @@ struct TimerFinale: View {
             }
             .overlay(Circle().stroke(Color.white, lineWidth: 2))
             NavigationLink(
-                destination: ListaTimerModifica().environmentObject(userData), isActive: $ListaTimerModify){
+                destination: ListaTimerModificaView().environmentObject(userData), isActive: $ListaTimerModify){
                 Text("Modify an existing timer")
             }
             .overlay(Circle().stroke(Color.white, lineWidth: 2))
@@ -116,14 +116,14 @@ struct TimerFinale: View {
     }
 }
 
-struct TimerFinale_Previews: PreviewProvider {
+struct TimerFinaleView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            TimerFinale()
+            TimerFinaleView()
                 .previewDevice("Apple Watch Series 6 - 44mm")
                 .environmentObject(UserData())
             
-            TimerFinale()
+            TimerFinaleView()
                 .previewDevice("Apple Watch Series 6 - 40mm")
                 .environmentObject(UserData())
         }

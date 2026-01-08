@@ -1,5 +1,5 @@
 //
-//  ListaTimerRow.swift
+//  ListaTimerRowView.swift
 //  Speech WatchKit Extension
 //
 //  Created by Valentino Palomba on 23/01/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ListaTimerRow: View {
+struct ListaTimerRowView: View {
     @State var element : ListElement
     
     var body: some View {
@@ -19,9 +19,8 @@ struct ListaTimerRow: View {
     }
 }
 
-struct ListaTimerRow_Previews: PreviewProvider {
+struct ListaTimerRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ListaTimerRow(element: UserData().listElements[0])
+        ListaTimerRowView(element: UserData().listElements[0])
     }
 }
-

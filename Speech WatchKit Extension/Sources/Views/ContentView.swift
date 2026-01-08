@@ -66,12 +66,12 @@ struct ContentView: View {
             .overlay(Circle().stroke(Color.white, lineWidth: 2))
             
             NavigationLink(
-                destination: ListaTimerModifica().environmentObject(UserData()), isActive: $ListaTimerModify){
+                destination: ListaTimerModificaView().environmentObject(UserData()), isActive: $ListaTimerModify){
                 Text("Modify an existing timer")
             }
             .overlay(Circle().stroke(Color.white, lineWidth: 2))
             
-            NavigationLink(destination: ListaTimerSelezione().environmentObject(UserData()), isActive: $ListaTimerSelect){
+            NavigationLink(destination: ListaTimerSelezioneView().environmentObject(UserData()), isActive: $ListaTimerSelect){
                 Text("Select an existing timer")
             }
             .overlay(Circle().stroke(Color.white, lineWidth: 2))
@@ -90,16 +90,16 @@ struct ContentView_Previews: PreviewProvider {
             
             MilestonesView()
             
-            ListaTimer()
+            ListaTimerView()
                 .environmentObject(UserData())
             
-            ListaTimerSelezione()
+            ListaTimerSelezioneView()
                 .environmentObject(UserData())
             
-            ListaTimerModifica()
+            ListaTimerModificaView()
                 .environmentObject(UserData())
             
-            TimerFinale()
+            TimerFinaleView()
                 .environmentObject(UserData())
         }
     }

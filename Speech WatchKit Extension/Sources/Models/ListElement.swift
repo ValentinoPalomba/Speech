@@ -21,11 +21,3 @@ struct ListElementSaved: Hashable, Codable, Identifiable {
     var timerDouble : Double
     var isActive : Bool = false
 }
-
-struct ListTimerSaved: Hashable, Codable, Identifiable{
-    var id = UUID()
-    var name : String
-    var timerString : String
-    var timerDouble : String
-    var isActive : Bool = false
-}

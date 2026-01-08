@@ -81,7 +81,7 @@ struct MilestonesView: View {
                     }.opacity(opacitySet)
                     .background(RoundedRectangle(cornerRadius: 12).foregroundColor(Color.blue)).opacity(opacitySet).frame(width: 70, height: 40, alignment: .center)
                     
-                    NavigationLink(destination: ListaTimer(TimerLista: TimeDone).environmentObject(UserData())){
+                    NavigationLink(destination: ListaTimerView(TimerLista: TimeDone).environmentObject(UserData())){
                         Text("Next")
                     }.opacity(opacityStart)
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.white, lineWidth: 2)).opacity(opacityStart).frame(width: 70, height: 40, alignment: .center)

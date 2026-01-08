@@ -74,32 +74,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTimerView.swift; sourceTree = "<group>"; };
+		D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/SaveTimerView.swift; sourceTree = "<group>"; };
 		D4E3C9AE23D9B664004D4E4A /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9B823D9B664004D4E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4E3C9BC23D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E3C9B823D9B664004D4E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		D4E3C9BC23D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
 		D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Speech WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9C623D9B667004D4E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D4E3C9C823D9B667004D4E4A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		D4E3C9D023D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E3C9C623D9B667004D4E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ContentView.swift; sourceTree = "<group>"; };
+		D4E3C9C823D9B667004D4E4A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/HostingController.swift; sourceTree = "<group>"; };
+		D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/NotificationController.swift; sourceTree = "<group>"; };
+		D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/NotificationView.swift; sourceTree = "<group>"; };
+		D4E3C9D023D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4E3C9D523D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D4E3C9E423D9B6F7004D4E4A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonesView.swift; sourceTree = "<group>"; };
-		D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerSelezione.swift; sourceTree = "<group>"; };
-		D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerModifica.swift; sourceTree = "<group>"; };
-		D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimer.swift; sourceTree = "<group>"; };
-		D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerRow.swift; sourceTree = "<group>"; };
-		D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTimerSavedRow.swift; sourceTree = "<group>"; };
-		D4E3C9F223D9B859004D4E4A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		D4E3C9F423D9B885004D4E4A /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListElement.swift; sourceTree = "<group>"; };
-		D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFinale.swift; sourceTree = "<group>"; };
+		D4E3C9D523D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
+		D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources/PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D4E3C9E423D9B6F7004D4E4A /* AppGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/AppGlobals.swift; sourceTree = "<group>"; };
+		D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/MilestonesView.swift; sourceTree = "<group>"; };
+		D4E3C9E823D9B755004D4E4A /* ListaTimerSelezioneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerSelezioneView.swift; sourceTree = "<group>"; };
+		D4E3C9EA23D9B77B004D4E4A /* ListaTimerModificaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerModificaView.swift; sourceTree = "<group>"; };
+		D4E3C9EC23D9B79B004D4E4A /* ListaTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerView.swift; sourceTree = "<group>"; };
+		D4E3C9EE23D9B80A004D4E4A /* ListaTimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerSavedRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F223D9B859004D4E4A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/UserData.swift; sourceTree = "<group>"; };
+		D4E3C9F423D9B885004D4E4A /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/ListElement.swift; sourceTree = "<group>"; };
+		D4E3C9F623D9B8A4004D4E4A /* TimerFinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/TimerFinaleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 			children = (
 				D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = "Resources/Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,10 +472,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = K2863FX4G2;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Speech WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Speech WatchKit Extension/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,10 +496,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Speech WatchKit Extension/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = K2863FX4G2;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Speech WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Speech WatchKit Extension/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2863FX4G2;
 				IBSC_MODULE = Speech_WatchKit_Extension;
-				INFOPLIST_FILE = "Speech WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Speech WatchKit App/Resources/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -542,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2863FX4G2;
 				IBSC_MODULE = Speech_WatchKit_Extension;
-				INFOPLIST_FILE = "Speech WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Speech WatchKit App/Resources/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = GP.Speech.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
