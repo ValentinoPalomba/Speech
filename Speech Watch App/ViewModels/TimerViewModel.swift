@@ -6,7 +6,6 @@ import SwiftUI
 /// Represents the different screens in the app for navigation.
 enum AppScreen: Hashable {
     case setMilestones
-    case customStops
     case timerActive
     case saveTimer(timerValue: Double)
     case editTimers
@@ -71,18 +70,27 @@ final class TimerViewModel: ObservableObject {
             notificationService.removeAllNotifications()
             notificationService.scheduleNotifications(for: notificationRequests)
             
-            // Start Timer (ticks every 60 seconds)
-            timerCancellable = Timer.publish(every: 60, on: .main, in: .common)
+            // Start Timer (ticks every second to show countdown)
+            timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
                 .autoconnect()
                 .sink { [weak self] _ in
                     guard let self = self else { return }
                     if self.currentTime > 0 {
-                        self.currentTime -= 1
+                        // Decrement by 1 second (expressed in minutes)
+                        self.currentTime -= (1.0 / 60.0)
                     } else {
+                        self.currentTime = 0
                         self.stopTimer()
                     }
                 }
         }
+    }
+    
+    func formatTime(_ minutes: Double) -> String {
+        let totalSeconds = Int(ceil(minutes * 60))
+        let mins = totalSeconds / 60
+        let secs = totalSeconds % 60
+        return String(format: "%02d:%02d", mins, secs)
     }
     
     func stopTimer() {
@@ -102,13 +110,32 @@ final class TimerViewModel: ObservableObject {
     
     // MARK: - Milestone Logic
     
+    func hasMilestone(at time: Double) -> Bool {
+        milestones.contains(time)
+    }
+    
+    func removeMilestone(at time: Double) {
+        if let index = milestones.firstIndex(of: time) {
+            milestones.remove(at: index)
+            // Remove the associated notification request
+            // Note: In a real app, we might want to use identifiers linked to the time
+            // to be more precise, but for now we'll just remove the one at the same index
+            if index < notificationRequests.count {
+                notificationRequests.remove(at: index)
+            }
+            print("Removed milestone at \(time)")
+        }
+    }
+    
     func addMilestone(at time: Double) {
+        guard !hasMilestone(at: time) else { return }
+        
         milestones.append(time)
         
         notificationService.requestAuthorization()
         
         let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "Sono passati \(ceil((time*100)/100)) minuti"
+        notificationContent.title = "Sono passati \(Int(time)) minuti"
         notificationContent.body = "Mancano \(Int(selectedTime - time)) minuti alla fine"
         notificationContent.badge = NSNumber(value: 1)
         notificationContent.sound = UNNotificationSound.default
@@ -123,6 +150,7 @@ final class TimerViewModel: ObservableObject {
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
         
         notificationRequests.append(request)
+        print("Added milestone at \(time)")
     }
     
     // MARK: - Persistence Logic
