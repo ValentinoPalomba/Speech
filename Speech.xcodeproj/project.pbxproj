@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D49845E5262CAFC200F92AF2 /* SaveTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */; };
+		D49845E5262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */; };
 		D4E3C9B323D9B664004D4E4A /* Speech WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4E3C9B923D9B664004D4E4A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9B723D9B664004D4E4A /* Interface.storyboard */; };
-		D4E3C9BB23D9B667004D4E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */; };
+		D4E3C9BB23D9B667004D4E4A /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9BA23D9B667004D4E4A /* Resources/Assets.xcassets */; };
 		D4E3C9C223D9B667004D4E4A /* Speech WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4E3C9C723D9B667004D4E4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C623D9B667004D4E4A /* ContentView.swift */; };
-		D4E3C9C923D9B667004D4E4A /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C823D9B667004D4E4A /* HostingController.swift */; };
-		D4E3C9CB23D9B667004D4E4A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */; };
-		D4E3C9CD23D9B667004D4E4A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */; };
-		D4E3C9CF23D9B667004D4E4A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */; };
-		D4E3C9D123D9B667004D4E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D023D9B667004D4E4A /* Assets.xcassets */; };
+		D4E3C9C723D9B667004D4E4A /* Sources/Views/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */; };
+		D4E3C9C923D9B667004D4E4A /* Sources/App/HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */; };
+		D4E3C9CB23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */; };
+		D4E3C9CD23D9B667004D4E4A /* Sources/App/NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */; };
+		D4E3C9CF23D9B667004D4E4A /* Sources/Views/NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */; };
+		D4E3C9D123D9B667004D4E4A /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */; };
 		D4E3C9D423D9B667004D4E4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */; };
-		D4E3C9E523D9B6F7004D4E4A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E423D9B6F7004D4E4A /* File.swift */; };
-		D4E3C9E723D9B725004D4E4A /* MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */; };
-		D4E3C9E923D9B755004D4E4A /* ListaTimerSelezione.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */; };
-		D4E3C9EB23D9B77B004D4E4A /* ListaTimerModifica.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */; };
-		D4E3C9ED23D9B79B004D4E4A /* ListaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */; };
-		D4E3C9EF23D9B80A004D4E4A /* ListaTimerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */; };
-		D4E3C9F123D9B834004D4E4A /* ListaTimerSavedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */; };
-		D4E3C9F323D9B859004D4E4A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F223D9B859004D4E4A /* UserData.swift */; };
-		D4E3C9F523D9B885004D4E4A /* ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F423D9B885004D4E4A /* ListElement.swift */; };
-		D4E3C9F723D9B8A4004D4E4A /* TimerFinale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */; };
+		D4E3C9E523D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */; };
+		D4E3C9E723D9B725004D4E4A /* Sources/Views/MilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */; };
+		D4E3C9E923D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */; };
+		D4E3C9EB23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */; };
+		D4E3C9ED23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */; };
+		D4E3C9EF23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */; };
+		D4E3C9F123D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */; };
+		D4E3C9F323D9B859004D4E4A /* Sources/Models/UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */; };
+		D4E3C9F523D9B885004D4E4A /* Sources/Models/ListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */; };
+		D4E3C9F723D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,32 +74,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/SaveTimerView.swift; sourceTree = "<group>"; };
+		A98783302F104CF300A5AC02 /* AGENTS.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGENTS.md; sourceTree = "<group>"; };
+		D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/SaveTimerView.swift; sourceTree = "<group>"; };
 		D4E3C9AE23D9B664004D4E4A /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E3C9B223D9B664004D4E4A /* Speech WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E3C9B823D9B664004D4E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
-		D4E3C9BC23D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
+		D4E3C9BA23D9B667004D4E4A /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		D4E3C9BC23D9B667004D4E4A /* Resources/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
 		D4E3C9C123D9B667004D4E4A /* Speech WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Speech WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4E3C9C623D9B667004D4E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ContentView.swift; sourceTree = "<group>"; };
-		D4E3C9C823D9B667004D4E4A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/HostingController.swift; sourceTree = "<group>"; };
-		D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/NotificationController.swift; sourceTree = "<group>"; };
-		D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/NotificationView.swift; sourceTree = "<group>"; };
-		D4E3C9D023D9B667004D4E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ContentView.swift; sourceTree = "<group>"; };
+		D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/HostingController.swift; sourceTree = "<group>"; };
+		D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/NotificationController.swift; sourceTree = "<group>"; };
+		D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/NotificationView.swift; sourceTree = "<group>"; };
+		D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D4E3C9D523D9B667004D4E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
-		D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources/PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D4E3C9E423D9B6F7004D4E4A /* AppGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/AppGlobals.swift; sourceTree = "<group>"; };
-		D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/MilestonesView.swift; sourceTree = "<group>"; };
-		D4E3C9E823D9B755004D4E4A /* ListaTimerSelezioneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerSelezioneView.swift; sourceTree = "<group>"; };
-		D4E3C9EA23D9B77B004D4E4A /* ListaTimerModificaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerModificaView.swift; sourceTree = "<group>"; };
-		D4E3C9EC23D9B79B004D4E4A /* ListaTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerView.swift; sourceTree = "<group>"; };
-		D4E3C9EE23D9B80A004D4E4A /* ListaTimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerRowView.swift; sourceTree = "<group>"; };
-		D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerSavedRowView.swift; sourceTree = "<group>"; };
-		D4E3C9F223D9B859004D4E4A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/UserData.swift; sourceTree = "<group>"; };
-		D4E3C9F423D9B885004D4E4A /* ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/ListElement.swift; sourceTree = "<group>"; };
-		D4E3C9F623D9B8A4004D4E4A /* TimerFinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/TimerFinaleView.swift; sourceTree = "<group>"; };
+		D4E3C9D523D9B667004D4E4A /* Resources/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
+		D4E3C9D623D9B667004D4E4A /* Resources/PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources/PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/AppGlobals.swift; sourceTree = "<group>"; };
+		D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/MilestonesView.swift; sourceTree = "<group>"; };
+		D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerSelezioneView.swift; sourceTree = "<group>"; };
+		D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerModificaView.swift; sourceTree = "<group>"; };
+		D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/ListaTimerView.swift; sourceTree = "<group>"; };
+		D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/Components/ListaTimerSavedRowView.swift; sourceTree = "<group>"; };
+		D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/UserData.swift; sourceTree = "<group>"; };
+		D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Models/ListElement.swift; sourceTree = "<group>"; };
+		D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Views/TimerFinaleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +117,7 @@
 		D4E3C9A723D9B664004D4E4A = {
 			isa = PBXGroup;
 			children = (
+				A98783302F104CF300A5AC02 /* AGENTS.md */,
 				D4E3C9B623D9B664004D4E4A /* Speech WatchKit App */,
 				D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */,
 				D4E3C9AF23D9B664004D4E4A /* Products */,
@@ -136,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				D4E3C9B723D9B664004D4E4A /* Interface.storyboard */,
-				D4E3C9BA23D9B667004D4E4A /* Assets.xcassets */,
-				D4E3C9BC23D9B667004D4E4A /* Info.plist */,
+				D4E3C9BA23D9B667004D4E4A /* Resources/Assets.xcassets */,
+				D4E3C9BC23D9B667004D4E4A /* Resources/Info.plist */,
 			);
 			path = "Speech WatchKit App";
 			sourceTree = "<group>";
@@ -145,31 +147,31 @@
 		D4E3C9C523D9B667004D4E4A /* Speech WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D4E3C9E423D9B6F7004D4E4A /* File.swift */,
-				D4E3C9C623D9B667004D4E4A /* ContentView.swift */,
-				D4E3C9E623D9B725004D4E4A /* MilestonesView.swift */,
-				D4E3C9E823D9B755004D4E4A /* ListaTimerSelezione.swift */,
-				D4E3C9EA23D9B77B004D4E4A /* ListaTimerModifica.swift */,
-				D4E3C9EC23D9B79B004D4E4A /* ListaTimer.swift */,
-				D4E3C9EE23D9B80A004D4E4A /* ListaTimerRow.swift */,
-				D4E3C9F023D9B834004D4E4A /* ListaTimerSavedRow.swift */,
-				D4E3C9F223D9B859004D4E4A /* UserData.swift */,
-				D4E3C9F423D9B885004D4E4A /* ListElement.swift */,
-				D4E3C9F623D9B8A4004D4E4A /* TimerFinale.swift */,
-				D49845E4262CAFC200F92AF2 /* SaveTimerView.swift */,
-				D4E3C9C823D9B667004D4E4A /* HostingController.swift */,
-				D4E3C9CA23D9B667004D4E4A /* ExtensionDelegate.swift */,
-				D4E3C9CC23D9B667004D4E4A /* NotificationController.swift */,
-				D4E3C9CE23D9B667004D4E4A /* NotificationView.swift */,
-				D4E3C9D023D9B667004D4E4A /* Assets.xcassets */,
-				D4E3C9D523D9B667004D4E4A /* Info.plist */,
-				D4E3C9D623D9B667004D4E4A /* PushNotificationPayload.apns */,
-				D4E3C9D223D9B667004D4E4A /* Preview Content */,
+				D4E3C9E423D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift */,
+				D4E3C9C623D9B667004D4E4A /* Sources/Views/ContentView.swift */,
+				D4E3C9E623D9B725004D4E4A /* Sources/Views/MilestonesView.swift */,
+				D4E3C9E823D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift */,
+				D4E3C9EA23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift */,
+				D4E3C9EC23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift */,
+				D4E3C9EE23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift */,
+				D4E3C9F023D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift */,
+				D4E3C9F223D9B859004D4E4A /* Sources/Models/UserData.swift */,
+				D4E3C9F423D9B885004D4E4A /* Sources/Models/ListElement.swift */,
+				D4E3C9F623D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift */,
+				D49845E4262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift */,
+				D4E3C9C823D9B667004D4E4A /* Sources/App/HostingController.swift */,
+				D4E3C9CA23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift */,
+				D4E3C9CC23D9B667004D4E4A /* Sources/App/NotificationController.swift */,
+				D4E3C9CE23D9B667004D4E4A /* Sources/Views/NotificationView.swift */,
+				D4E3C9D023D9B667004D4E4A /* Resources/Assets.xcassets */,
+				D4E3C9D523D9B667004D4E4A /* Resources/Info.plist */,
+				D4E3C9D623D9B667004D4E4A /* Resources/PushNotificationPayload.apns */,
+				D4E3C9D223D9B667004D4E4A /* Resources/Preview Content */,
 			);
 			path = "Speech WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		D4E3C9D223D9B667004D4E4A /* Preview Content */ = {
+		D4E3C9D223D9B667004D4E4A /* Resources/Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 				D4E3C9D323D9B667004D4E4A /* Preview Assets.xcassets */,
@@ -284,7 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E3C9BB23D9B667004D4E4A /* Assets.xcassets in Resources */,
+				D4E3C9BB23D9B667004D4E4A /* Resources/Assets.xcassets in Resources */,
 				D4E3C9B923D9B664004D4E4A /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E3C9D423D9B667004D4E4A /* Preview Assets.xcassets in Resources */,
-				D4E3C9D123D9B667004D4E4A /* Assets.xcassets in Resources */,
+				D4E3C9D123D9B667004D4E4A /* Resources/Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,22 +307,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E3C9F323D9B859004D4E4A /* UserData.swift in Sources */,
-				D4E3C9EB23D9B77B004D4E4A /* ListaTimerModifica.swift in Sources */,
-				D4E3C9E923D9B755004D4E4A /* ListaTimerSelezione.swift in Sources */,
-				D4E3C9C923D9B667004D4E4A /* HostingController.swift in Sources */,
-				D4E3C9F723D9B8A4004D4E4A /* TimerFinale.swift in Sources */,
-				D4E3C9EF23D9B80A004D4E4A /* ListaTimerRow.swift in Sources */,
-				D4E3C9F123D9B834004D4E4A /* ListaTimerSavedRow.swift in Sources */,
-				D4E3C9E523D9B6F7004D4E4A /* File.swift in Sources */,
-				D4E3C9C723D9B667004D4E4A /* ContentView.swift in Sources */,
-				D49845E5262CAFC200F92AF2 /* SaveTimerView.swift in Sources */,
-				D4E3C9CD23D9B667004D4E4A /* NotificationController.swift in Sources */,
-				D4E3C9CB23D9B667004D4E4A /* ExtensionDelegate.swift in Sources */,
-				D4E3C9F523D9B885004D4E4A /* ListElement.swift in Sources */,
-				D4E3C9CF23D9B667004D4E4A /* NotificationView.swift in Sources */,
-				D4E3C9E723D9B725004D4E4A /* MilestonesView.swift in Sources */,
-				D4E3C9ED23D9B79B004D4E4A /* ListaTimer.swift in Sources */,
+				D4E3C9F323D9B859004D4E4A /* Sources/Models/UserData.swift in Sources */,
+				D4E3C9EB23D9B77B004D4E4A /* Sources/Views/ListaTimerModificaView.swift in Sources */,
+				D4E3C9E923D9B755004D4E4A /* Sources/Views/ListaTimerSelezioneView.swift in Sources */,
+				D4E3C9C923D9B667004D4E4A /* Sources/App/HostingController.swift in Sources */,
+				D4E3C9F723D9B8A4004D4E4A /* Sources/Views/TimerFinaleView.swift in Sources */,
+				D4E3C9EF23D9B80A004D4E4A /* Sources/Views/Components/ListaTimerRowView.swift in Sources */,
+				D4E3C9F123D9B834004D4E4A /* Sources/Views/Components/ListaTimerSavedRowView.swift in Sources */,
+				D4E3C9E523D9B6F7004D4E4A /* Sources/Models/AppGlobals.swift in Sources */,
+				D4E3C9C723D9B667004D4E4A /* Sources/Views/ContentView.swift in Sources */,
+				D49845E5262CAFC200F92AF2 /* Sources/Views/SaveTimerView.swift in Sources */,
+				D4E3C9CD23D9B667004D4E4A /* Sources/App/NotificationController.swift in Sources */,
+				D4E3C9CB23D9B667004D4E4A /* Sources/App/ExtensionDelegate.swift in Sources */,
+				D4E3C9F523D9B885004D4E4A /* Sources/Models/ListElement.swift in Sources */,
+				D4E3C9CF23D9B667004D4E4A /* Sources/Views/NotificationView.swift in Sources */,
+				D4E3C9E723D9B725004D4E4A /* Sources/Views/MilestonesView.swift in Sources */,
+				D4E3C9ED23D9B79B004D4E4A /* Sources/Views/ListaTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
