@@ -1,45 +1,77 @@
 //
 //  SelectTimerView.swift
-//  Speech WatchKit Extension
+//  Speech Watch App
 //
-//  Created by Valentino Palomba on 23/01/2020.
-//  Copyright © 2020 Valentino Palomba. All rights reserved.
+//  Created by Valentino Palomba on 30/06/26.
 //
 
 import SwiftUI
-import Combine
 
+/// Choose a saved preset to load into the setup flow.
 struct SelectTimerView: View {
-    @EnvironmentObject var timerViewModel: TimerViewModel
-    
+    @EnvironmentObject var vm: TimerViewModel
+
     var body: some View {
-        VStack {
-            Text("Choose timer")
-                .font(.headline)
-                .padding(.bottom, 10)
-            
-            List(timerViewModel.savedTimers, id: \.id){ element in
-                Button(action: {
-                    timerViewModel.selectedTime = element.timerDouble
-                    timerViewModel.navigate(to: .setMilestones)
-                }) {
-                    SavedTimerRow(element: element)
+        Group {
+            if vm.savedTimers.isEmpty {
+                EmptyPresetsView()
+            } else {
+                List {
+                    ForEach(vm.savedTimers) { timer in
+                        Button {
+                            vm.selectPreset(timer)
+                        } label: {
+                            SavedTimerRow(timer: timer)
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                    }
+                }
+                .listStyle(.carousel)
+            }
+        }
+        .background(AppColor.background)
+        .navigationTitle("presets.choose.title")
+        .toolbar {
+            if !vm.savedTimers.isEmpty {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        vm.navigate(to: .editPresets)
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                    }
+                    .accessibilityLabel(Text("menu.edit"))
                 }
             }
         }
-        .navigationTitle("Presets")
     }
 }
 
-struct SelectTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group{
-            SelectTimerView()
-                .previewDevice("Apple Watch Series 5 - 44mm")
-            
-            SelectTimerView()
-                .previewDevice("Apple Watch Series 5 - 40mm")
+/// Shown when there are no presets yet.
+struct EmptyPresetsView: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: "timer")
+                .font(.largeTitle)
+                .foregroundStyle(AppColor.accent)
+            Text("presets.empty.title")
+                .font(.system(.headline, design: .rounded))
+                .multilineTextAlignment(.center)
+            Text("presets.empty.subtitle")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
         }
-        .environmentObject(TimerViewModel())
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(AppColor.background)
     }
+}
+
+#Preview {
+    SelectTimerView()
+        .environmentObject({
+            let vm = TimerViewModel()
+            return vm
+        }())
 }

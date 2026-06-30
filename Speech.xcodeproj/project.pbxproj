@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A98783422F1062FA00A5AC02 /* Speech Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A98783412F1062FA00A5AC02 /* Speech Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC00000000000000000C0005 /* Speech Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A98783412F1062FA00A5AC02 /* Speech Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A98783432F1062FA00A5AC02 /* PBXContainerItemProxy */ = {
+		BB000000000000000000000A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E3C9A823D9B664004D4E4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98783402F1062FA00A5AC02;
+			remoteInfo = "Speech Watch App";
+		};
+		CC00000000000000000C0009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4E3C9A823D9B664004D4E4A /* Project object */;
 			proxyType = 1;
@@ -21,13 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A987834F2F1062FA00A5AC02 /* Embed Watch Content */ = {
+		CC00000000000000000C0004 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				A98783422F1062FA00A5AC02 /* Speech Watch App.app in Embed Watch Content */,
+				CC00000000000000000C0005 /* Speech Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,24 +42,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A98783352F1062F900A5AC02 /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98783412F1062FA00A5AC02 /* Speech Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0000000000000000000002 /* SpeechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC00000000000000000C0002 /* Speech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A98783362F1062F900A5AC02 /* Speech */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Speech; sourceTree = "<group>"; };
 		A98783452F1062FA00A5AC02 /* Speech Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Speech Watch App"; sourceTree = "<group>"; };
+		BB0000000000000000000003 /* SpeechTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SpeechTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A98783322F1062F900A5AC02 /* Frameworks */ = {
+		A987833E2F1062FA00A5AC02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A987833E2F1062FA00A5AC02 /* Frameworks */ = {
+		BB0000000000000000000005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,20 +70,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17FEE472FF3F9A900DA3AEA /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BB0000000000000000000003 /* SpeechTests */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		D4E3C9A723D9B664004D4E4A = {
 			isa = PBXGroup;
 			children = (
-				A98783362F1062F900A5AC02 /* Speech */,
 				A98783452F1062FA00A5AC02 /* Speech Watch App */,
 				D4E3C9AF23D9B664004D4E4A /* Products */,
+				D17FEE472FF3F9A900DA3AEA /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
 		D4E3C9AF23D9B664004D4E4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A98783352F1062F900A5AC02 /* Speech.app */,
+				CC00000000000000000C0002 /* Speech.app */,
 				A98783412F1062FA00A5AC02 /* Speech Watch App.app */,
+				BB0000000000000000000002 /* SpeechTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,30 +100,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A98783342F1062F900A5AC02 /* Speech */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A98783502F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech" */;
-			buildPhases = (
-				A98783312F1062F900A5AC02 /* Sources */,
-				A98783322F1062F900A5AC02 /* Frameworks */,
-				A98783332F1062F900A5AC02 /* Resources */,
-				A987834F2F1062FA00A5AC02 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A98783442F1062FA00A5AC02 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				A98783362F1062F900A5AC02 /* Speech */,
-			);
-			name = Speech;
-			packageProductDependencies = (
-			);
-			productName = Speech;
-			productReference = A98783352F1062F900A5AC02 /* Speech.app */;
-			productType = "com.apple.product-type.application";
-		};
 		A98783402F1062FA00A5AC02 /* Speech Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A987834C2F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech Watch App" */;
@@ -129,6 +122,48 @@
 			productReference = A98783412F1062FA00A5AC02 /* Speech Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BB0000000000000000000001 /* SpeechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB0000000000000000000007 /* Build configuration list for PBXNativeTarget "SpeechTests" */;
+			buildPhases = (
+				BB0000000000000000000004 /* Sources */,
+				BB0000000000000000000005 /* Frameworks */,
+				BB0000000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB000000000000000000000B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BB0000000000000000000003 /* SpeechTests */,
+			);
+			name = SpeechTests;
+			packageProductDependencies = (
+			);
+			productName = SpeechTests;
+			productReference = BB0000000000000000000002 /* SpeechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC00000000000000000C0001 /* Speech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC00000000000000000C0006 /* Build configuration list for PBXNativeTarget "Speech" */;
+			buildPhases = (
+				CC00000000000000000C0003 /* Resources */,
+				CC00000000000000000C0004 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC00000000000000000C000A /* PBXTargetDependency */,
+			);
+			name = Speech;
+			packageProductDependencies = (
+			);
+			productName = Speech;
+			productReference = CC00000000000000000C0002 /* Speech.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -137,12 +172,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = "Girolamo Pinto";
+				ORGANIZATIONNAME = "Valentino Palomba";
 				TargetAttributes = {
-					A98783342F1062F900A5AC02 = {
+					A98783402F1062FA00A5AC02 = {
 						CreatedOnToolsVersion = 26.2;
 					};
-					A98783402F1062FA00A5AC02 = {
+					BB0000000000000000000001 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = A98783402F1062FA00A5AC02;
+					};
+					CC00000000000000000C0001 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -154,27 +193,36 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = D4E3C9A723D9B664004D4E4A;
 			productRefGroup = D4E3C9AF23D9B664004D4E4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A98783342F1062F900A5AC02 /* Speech */,
+				CC00000000000000000C0001 /* Speech */,
 				A98783402F1062FA00A5AC02 /* Speech Watch App */,
+				BB0000000000000000000001 /* SpeechTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A98783332F1062F900A5AC02 /* Resources */ = {
+		A987833F2F1062FA00A5AC02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A987833F2F1062FA00A5AC02 /* Resources */ = {
+		BB0000000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC00000000000000000C0003 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,14 +232,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A98783312F1062F900A5AC02 /* Sources */ = {
+		A987833D2F1062FA00A5AC02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A987833D2F1062FA00A5AC02 /* Sources */ = {
+		BB0000000000000000000004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,10 +249,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A98783442F1062FA00A5AC02 /* PBXTargetDependency */ = {
+		BB000000000000000000000B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A98783402F1062FA00A5AC02 /* Speech Watch App */;
-			targetProxy = A98783432F1062FA00A5AC02 /* PBXContainerItemProxy */;
+			targetProxy = BB000000000000000000000A /* PBXContainerItemProxy */;
+		};
+		CC00000000000000000C000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98783402F1062FA00A5AC02 /* Speech Watch App */;
+			targetProxy = CC00000000000000000C0009 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -218,20 +271,22 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JS222QZL3;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Speech;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = valentinopalomba.Speech;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechtalk.watchkitapp;
+				PRODUCT_MODULE_NAME = Speech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -243,7 +298,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -256,20 +311,22 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JS222QZL3;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Speech;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = valentinopalomba.Speech;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechtalk.watchkitapp;
+				PRODUCT_MODULE_NAME = Speech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -280,84 +337,88 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
-		A98783512F1062FA00A5AC02 /* Debug */ = {
+		BB0000000000000000000008 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Speech;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SDKROOT = watchos;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speech Watch App.app/Speech Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
-		A98783522F1062FA00A5AC02 /* Release */ = {
+		BB0000000000000000000009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Speech;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = valentinopalomba.Speech;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SDKROOT = watchos;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speech Watch App.app/Speech Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		CC00000000000000000C0007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JS222QZL3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechtalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CC00000000000000000C0008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JS222QZL3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Speech;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.valentinopalomba.speechtalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -367,7 +428,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -412,13 +473,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = watchos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -428,7 +489,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -467,13 +528,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = watchos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -489,11 +550,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A98783502F1062FA00A5AC02 /* Build configuration list for PBXNativeTarget "Speech" */ = {
+		BB0000000000000000000007 /* Build configuration list for PBXNativeTarget "SpeechTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A98783512F1062FA00A5AC02 /* Debug */,
-				A98783522F1062FA00A5AC02 /* Release */,
+				BB0000000000000000000008 /* Debug */,
+				BB0000000000000000000009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC00000000000000000C0006 /* Build configuration list for PBXNativeTarget "Speech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC00000000000000000C0007 /* Debug */,
+				CC00000000000000000C0008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Per-user Xcode state (schemes are shared via xcshareddata)
+xcuserdata/
+**/xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# Fastlane / build artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# logs
+*.log

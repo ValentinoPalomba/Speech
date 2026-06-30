@@ -1,40 +1,49 @@
 //
 //  EditTimersView.swift
-//  Speech WatchKit Extension
+//  Speech Watch App
 //
-//  Created by Valentino Palomba on 23/01/2020.
-//  Copyright © 2020 Valentino Palomba. All rights reserved.
+//  Created by Valentino Palomba on 30/06/26.
 //
 
 import SwiftUI
 
+/// Manage saved presets: tap to edit, swipe to delete.
 struct EditTimersView: View {
-    @EnvironmentObject var timerViewModel: TimerViewModel
+    @EnvironmentObject var vm: TimerViewModel
+
     var body: some View {
-        VStack {
-            if #available(watchOSApplicationExtension 7.0, *) {
-                Text("Edit timer").font(.title2).frame(width: 180.0, height: 5.0).padding(.top,10)
-                    .padding(.bottom,20)
+        Group {
+            if vm.savedTimers.isEmpty {
+                EmptyPresetsView()
             } else {
-                // Fallback on earlier versions
-                Text("Edit timer").font(.system(size: 30.0)).frame(width: 180.0, height: 10.0).padding(.top)
-            }
-            List(timerViewModel.savedTimers){ element in
-                SavedTimerRow(element: element)
+                List {
+                    ForEach(vm.savedTimers) { timer in
+                        Button {
+                            vm.beginEditing(timer)
+                        } label: {
+                            SavedTimerRow(timer: timer)
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                vm.deletePreset(timer)
+                            } label: {
+                                Label("action.delete", systemImage: "trash")
+                            }
+                        }
+                    }
+                    .onDelete { vm.deletePresets(at: $0) }
+                }
+                .listStyle(.carousel)
             }
         }
+        .background(AppColor.background)
+        .navigationTitle("presets.manage.title")
     }
 }
 
-struct EditTimersView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group{
-            EditTimersView()
-                .previewDevice("Apple Watch Series 6 - 44mm")
-            
-            EditTimersView()
-                .previewDevice("Apple Watch Series 6 - 40mm")
-        }
+#Preview {
+    EditTimersView()
         .environmentObject(TimerViewModel())
-    }
 }

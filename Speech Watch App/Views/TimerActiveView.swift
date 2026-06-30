@@ -1,143 +1,139 @@
 //
 //  TimerActiveView.swift
-//  Speech WatchKit Extension
+//  Speech Watch App
 //
-//  Created by Valentino Palomba on 23/01/2020.
-//  Copyright © 2020 Valentino Palomba. All rights reserved.
+//  Created by Valentino Palomba on 30/06/26.
 //
 
 import SwiftUI
-import UserNotifications
-import Combine
 
+/// A cone of light: narrow at the dial, flaring outward toward the bottom —
+/// the "speaker under a spotlight" metaphor at the heart of the design.
 struct SpotlightShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        let width = rect.width
-        let height = rect.height
-        
-        // Broad source at the top, natural spread at the bottom
-        path.move(to: CGPoint(x: width * 0.1, y: 0))
-        path.addLine(to: CGPoint(x: width * 0.85, y: 0))
-        path.addLine(to: CGPoint(x: width * 1.15, y: height * 1.2))
-        path.addLine(to: CGPoint(x: -width * 0.15, y: height * 1.2))
+        let w = rect.width, h = rect.height
+        path.move(to: CGPoint(x: w * 0.40, y: 0))
+        path.addLine(to: CGPoint(x: w * 0.60, y: 0))
+        path.addLine(to: CGPoint(x: w * 1.02, y: h))
+        path.addLine(to: CGPoint(x: -w * 0.02, y: h))
         path.closeSubpath()
-        
         return path
     }
 }
 
+/// Active countdown screen.
 struct TimerActiveView: View {
-    @EnvironmentObject var timerViewModel: TimerViewModel
-    @State var isShowingAlert = false
-    
-    var body: some View {
-        ZStack {
-            // REFINED VOLUMETRIC SPOTLIGHT (Middle ground width)
-            ZStack {
-                // The main beam
-                SpotlightShape()
-                    .fill(
-                        LinearGradient(
-                            gradient: Gradient(stops: [
-                                .init(color: Color.clear, location: 0),
-                                .init(color: Color.blue.opacity(0.1), location: 0.6),
-                                .init(color: Color.blue.opacity(0.1), location: 0.8),
-                                .init(color: Color.clear, location: 0.99)
-                            ]),
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
-                    .frame(width: 150, height: 240)
-                    .blur(radius: 8)
-                
-                // The glowing floor ellipse
-                Ellipse()
-                    .fill(Color.blue.opacity(0.25))
-                    .frame(width: 180, height: 90)
-                    .offset(y: 115)
-                    .blur(radius: 5)
-            }
-            .offset(y: -40)
-            .ignoresSafeArea()
+    @EnvironmentObject var vm: TimerViewModel
 
-            VStack(spacing: 0) {
-                Spacer()
-                    .frame(height: 25)
-                
-                ZStack {
-                    // Background Circle
-                    Circle()
-                        .stroke(Color.white.opacity(0.3), lineWidth: 1)
-                        .frame(width: 120, height: 120)
-                    
-                    // Progress Arc
-                    Circle()
-                        .trim(from: 0.0, to: CGFloat(timerViewModel.selectedTime > 0 ? timerViewModel.currentTime / timerViewModel.selectedTime : 0))
-                        .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round))
-                        .frame(width: 120, height: 120)
-                        .rotationEffect(.degrees(-90))
-                        .animation(.linear, value: timerViewModel.currentTime)
-                    
-                    // Milestone Dots (White dots)
-                    ForEach(timerViewModel.milestones, id: \.self) { milestone in
-                        Circle()
-                            .fill(Color.white)
-                            .frame(width: 6, height: 6)
-                            .offset(y: -65) // Adjusted for 130 circle
-                            .rotationEffect(.degrees((milestone / timerViewModel.selectedTime) * 360))
-                    }
-                    
-                    // Current Position Knob (Black background, blue stroke)
-                    Circle()
-                        .stroke(Color.blue, lineWidth: 2)
-                        .background(Circle().fill(Color.black))
-                        .frame(width: 14, height: 14)
-                        .offset(y: -65) // Adjusted for 130 circle
-                        .rotationEffect(.degrees((timerViewModel.currentTime / timerViewModel.selectedTime) * 360))
-                        .animation(.linear, value: timerViewModel.currentTime)
-                    
-                    Text(timerViewModel.formatTime(timerViewModel.currentTime))
-                        .font(.system(size: 32, weight: .light, design: .rounded))
-                }
-                .frame(height: 140)
-                
-                Spacer()
-                
-                Button(action: {
-                    if timerViewModel.isTimerRunning {
-                        timerViewModel.stopTimer()
-                    } else {
-                        timerViewModel.startTimer()
-                    }
-                }) {
-                    Text(timerViewModel.isTimerRunning ? "Stop" : "Start")
-                        .font(.system(size: 18))
-                        .frame(width: 100, height: 40)
-                        .overlay(
-                            Capsule()
-                                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-                        )
-                }
-                .buttonStyle(.plain)
-                .padding(.bottom, 25)
+    var body: some View {
+        GeometryReader { geo in
+            let side = min(geo.size.width, geo.size.height)
+            let dial = side * 0.66
+            let cx = geo.size.width / 2
+            let dialCenterY = geo.size.height * 0.40
+            let coneHeight = geo.size.height * 0.72
+
+            ZStack {
+                AppColor.background.ignoresSafeArea()
+
+                spotlight
+                    .frame(width: dial * 1.8, height: coneHeight)
+                    .blur(radius: 10)
+                    .position(x: cx, y: dialCenterY + coneHeight / 2)
+                    .allowsHitTesting(false)
+                    .accessibilityHidden(true)
+
+                dialView(diameter: dial)
+                    .frame(width: dial, height: dial)
+                    .position(x: cx, y: dialCenterY)
+
+                actionButton
+                    .frame(width: dial)
+                    .position(x: cx, y: geo.size.height * 0.88)
             }
         }
-        .navigationTitle("")
+        .background(AppColor.background)
+        .navigationTitle(Text(verbatim: ""))
+        .navigationBarBackButtonHidden(vm.runState == .running)
+        .onAppear { vm.prepareActiveIfNeeded() }
+    }
+
+    private var spotlight: some View {
+        SpotlightShape()
+            .fill(
+                LinearGradient(
+                    stops: [
+                        .init(color: AppColor.highlight.opacity(0.40), location: 0),
+                        .init(color: AppColor.accent.opacity(0.14), location: 0.45),
+                        .init(color: .clear, location: 1)
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+    }
+
+    private func dialView(diameter: CGFloat) -> some View {
+        let radius = diameter / 2
+        let total = vm.sessionMinutes
+        return ZStack {
+            Circle()
+                .strokeBorder(AppColor.faintStroke, lineWidth: 1)
+
+            Circle()
+                .trim(from: 0, to: CGFloat(vm.progress))
+                .stroke(AppColor.accent, style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+                .animation(.linear(duration: 0.2), value: vm.progress)
+
+            ForEach(vm.milestones.filter { $0.minutes > 0 && $0.minutes < total }) { milestone in
+                MilestoneMarker(diameter: diameter * 0.075)
+                    .ringOffset(radius: radius, angle: dialAngle(value: milestone.minutes, total: total))
+            }
+            .accessibilityHidden(true)
+
+            Circle()
+                .fill(AppColor.background)
+                .overlay(Circle().strokeBorder(AppColor.accent, lineWidth: 2))
+                .frame(width: diameter * 0.11, height: diameter * 0.11)
+                .ringOffset(radius: radius, angle: vm.progress * 360)
+                .animation(.linear(duration: 0.2), value: vm.progress)
+                .accessibilityHidden(true)
+
+            Text(vm.remainingClock)
+                .font(.dialNumber(diameter * 0.26))
+                .monospacedDigit()
+                .minimumScaleFactor(0.5)
+                .foregroundStyle(.white)
+        }
+        .accessibilityElement()
+        .accessibilityLabel(Text("a11y.timeRemaining"))
+        .accessibilityValue(Text(vm.remainingClock))
+    }
+
+    @ViewBuilder
+    private var actionButton: some View {
+        switch vm.runState {
+        case .idle:
+            Button { vm.start() } label: { Text("action.start") }
+                .buttonStyle(.pill(tint: AppColor.accent, prominent: true))
+        case .running:
+            Button { vm.stop() } label: { Text("action.stop") }
+                .buttonStyle(.pill(tint: AppColor.destructive))
+        case .finished:
+            Button { vm.finishAndReset() } label: { Text("action.done") }
+                .buttonStyle(.pill(tint: AppColor.accent, prominent: true))
+        }
     }
 }
 
-struct TimerActiveView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group{
-            TimerActiveView()
-                .previewDevice("Apple Watch Series 6 - 44mm")
-                .environmentObject(TimerViewModel())
-            
-            TimerActiveView()
-                .previewDevice("Apple Watch Series 6 - 40mm")
-                .environmentObject(TimerViewModel())
-        }
-    }
+#Preview {
+    TimerActiveView()
+        .environmentObject({
+            let vm = TimerViewModel()
+            vm.selectedMinutes = 7
+            vm.prepareActiveIfNeeded()
+            return vm
+        }())
 }

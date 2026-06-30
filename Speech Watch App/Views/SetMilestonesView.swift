@@ -1,118 +1,131 @@
 //
 //  SetMilestonesView.swift
-//  Speech WatchKit Extension
+//  Speech Watch App
 //
-//  Created by Valentino Palomba on 23/01/2020.
-//  Copyright © 2020 Valentino Palomba. All rights reserved.
+//  Created by Valentino Palomba on 30/06/26.
 //
 
 import SwiftUI
-import UserNotifications
-import Combine
 
+/// Second step: place "stops" (milestones) along the speech with the crown.
 struct SetMilestonesView: View {
-    @EnvironmentObject var timerViewModel: TimerViewModel
-    @State var milestoneSelection = 0.0
-    
+    @EnvironmentObject var vm: TimerViewModel
+    @State private var selection: Double = 0
+
+    private var total: Double { vm.selectedMinutes }
+    private var isOnMilestone: Bool { vm.hasMilestone(atMinutes: selection) }
+
     var body: some View {
-        VStack(spacing: 10) {
-            HStack(spacing: 0) {
-                Text("Set ")
-                    .font(.system(size: 16))
-                Text("stops")
-                    .font(.system(size: 16, weight: .bold))
-            }
-            .padding(.top, 5)
-            
-            ZStack {
-                // Background Circle
-                Circle()
-                    .stroke(Color.white.opacity(0.3), lineWidth: 1)
-                    .frame(width: 90, height: 90)
-                
-                // Progress Arc
-                Circle()
-                    .trim(from: 0.0, to: CGFloat(timerViewModel.selectedTime > 0 ? milestoneSelection / timerViewModel.selectedTime : 0))
-                    .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round))
-                    .frame(width: 90, height: 90)
-                    .rotationEffect(.degrees(-90))
-                
-                // Static Start Knob
-                Circle()
-                    .fill(Color.blue)
-                    .frame(width: 14, height: 14)
-                    .offset(y: -45)
-                
-                // Milestone Dots (existing ones)
-                ForEach(timerViewModel.milestones, id: \.self) { milestone in
-                    Circle()
-                        .stroke(Color.blue, lineWidth: 2)
-                        .background(Circle().fill(Color.black))
-                        .frame(width: 10, height: 10)
-                        .offset(y: -45)
-                        .rotationEffect(.degrees((milestone / timerViewModel.selectedTime) * 360))
-                }
-                
-                // Current Selection Knob
-                Circle()
-                    .stroke(Color.blue, lineWidth: 2)
-                    .background(Circle().fill(Color.blue.opacity(0.2)))
-                    .frame(width: 14, height: 14)
-                    .offset(y: -45)
-                    .rotationEffect(.degrees((milestoneSelection / timerViewModel.selectedTime) * 360))
-                
-                // Time Text (MM:SS format)
-                Text(timerViewModel.formatTime(milestoneSelection))
-                    .font(.system(size: 22, weight: .light, design: .rounded))
-            }
-            .focusable(true)
-            .digitalCrownRotation($milestoneSelection, from: 0.0, through: timerViewModel.selectedTime, by: 1.0, sensitivity: .low, isContinuous: false, isHapticFeedbackEnabled: true)
-            .frame(width: 100, height: 100)
-            
-            HStack(spacing: 8) {
-                Button(action : {
-                    if timerViewModel.hasMilestone(at: milestoneSelection) {
-                        timerViewModel.removeMilestone(at: milestoneSelection)
-                    } else {
-                        timerViewModel.addMilestone(at: milestoneSelection)
+        GeometryReader { geo in
+            let dial = min(geo.size.width, geo.size.height) * 0.58
+            VStack(spacing: geo.size.height * 0.05) {
+                Text("setStops.title")
+                    .font(.screenTitle)
+
+                milestoneDial(diameter: dial)
+                    .frame(width: dial, height: dial)
+
+                HStack(spacing: 8) {
+                    Button {
+                        vm.toggleMilestone(atMinutes: selection)
+                    } label: {
+                        Text(isOnMilestone ? "action.remove" : "action.add")
                     }
-                }){
-                    Text(timerViewModel.hasMilestone(at: milestoneSelection) ? "Remove" : "Add")
-                        .font(.system(size: 13))
-                        .frame(width: 70, height: 28)
-                        .overlay(
-                            Capsule()
-                                .stroke(timerViewModel.hasMilestone(at: milestoneSelection) ? Color.red : Color.blue, lineWidth: 1)
-                        )
+                    .buttonStyle(.pill(tint: isOnMilestone ? AppColor.destructive : AppColor.accent))
+                    .disabled(selection <= 0 || selection >= total)
+
+                    Button {
+                        vm.navigate(to: .timerActive)
+                    } label: {
+                        Text("action.done")
+                    }
+                    .buttonStyle(.pill(tint: AppColor.accent, prominent: true))
                 }
-                .buttonStyle(.plain)
-                
-                Button(action: {
-                    timerViewModel.navigate(to: .timerActive)
-                }) {
-                    Text("Done")
-                        .font(.system(size: 13))
-                        .frame(width: 70, height: 28)
-                        .overlay(
-                            Capsule()
-                                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-                        )
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .padding(.horizontal, 6)
+        .background(AppColor.background)
+        .navigationTitle(Text(verbatim: ""))
+        .onAppear {
+            #if DEBUG
+            if vm.uiTestScreen == "setStops" { selection = 10 }
+            #endif
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    vm.beginNewPreset()
+                } label: {
+                    Image(systemName: "square.and.arrow.down")
                 }
-                .buttonStyle(.plain)
+                .accessibilityLabel(Text("menu.savePreset"))
+            }
+        }
+    }
+
+    private func milestoneDial(diameter: CGFloat) -> some View {
+        let radius = diameter / 2
+        return ZStack {
+            Circle()
+                .strokeBorder(AppColor.faintStroke, lineWidth: 1)
+
+            Circle()
+                .trim(from: 0, to: CGFloat(total > 0 ? selection / total : 0))
+                .stroke(AppColor.accent, style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                .rotationEffect(.degrees(-90))
+
+            // Start knob at the top.
+            Circle()
+                .fill(AppColor.accent)
+                .frame(width: diameter * 0.09, height: diameter * 0.09)
+                .ringOffset(radius: radius, angle: 0)
+                .accessibilityHidden(true)
+
+            // Existing milestones (only those that fit the current duration).
+            ForEach(vm.milestones.filter { $0.minutes > 0 && $0.minutes < total }) { milestone in
+                MilestoneMarker(diameter: diameter * 0.09)
+                    .ringOffset(radius: radius, angle: dialAngle(value: milestone.minutes, total: total))
+            }
+            .accessibilityHidden(true)
+
+            // Current selection knob.
+            Circle()
+                .fill(AppColor.accent.opacity(0.25))
+                .overlay(Circle().strokeBorder(AppColor.accent, lineWidth: 2))
+                .frame(width: diameter * 0.12, height: diameter * 0.12)
+                .ringOffset(radius: radius, angle: dialAngle(value: selection, total: total))
+                .accessibilityHidden(true)
+
+            Text(TimeFormat.clock(minutes: selection))
+                .font(.dialNumber(diameter * 0.24))
+                .minimumScaleFactor(0.5)
+                .foregroundStyle(.white)
+        }
+        .focusable()
+        .digitalCrownRotation(
+            $selection,
+            from: 0, through: max(total, 0.0001), by: 1,
+            sensitivity: .low, isContinuous: false, isHapticFeedbackEnabled: true
+        )
+        .accessibilityElement()
+        .accessibilityLabel(Text("a11y.stopPosition"))
+        .accessibilityValue(Text(TimeFormat.clock(minutes: selection)))
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment: selection = min(total, selection + 1)
+            case .decrement: selection = max(0, selection - 1)
+            @unknown default: break
             }
         }
     }
 }
 
-struct SetMilestonesView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group(){
-            SetMilestonesView()
-                .previewDevice("Apple Watch Series 5 - 44mm")
-            
-            SetMilestonesView()
-                .previewDevice("Apple Watch Series 5 - 40mm")
-        }
-        .environmentObject(TimerViewModel())
-    }
+#Preview {
+    SetMilestonesView()
+        .environmentObject({
+            let vm = TimerViewModel()
+            vm.selectedMinutes = 10
+            return vm
+        }())
 }

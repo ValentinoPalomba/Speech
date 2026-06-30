@@ -1,65 +1,78 @@
 //
 //  SaveTimerView.swift
-//  Speech WatchKit Extension
+//  Speech Watch App
 //
-//  Created by Girolamo Pinto on 18/04/21.
-//  Copyright © 2021 Girolamo Pinto. All rights reserved.
+//  Created by Valentino Palomba on 30/06/26.
 //
 
 import SwiftUI
-import UIKit
-import Foundation
 
+/// Create or edit a preset: name, colour and the configured duration.
 struct SaveTimerView: View {
-    @State var name : String
-    @State var timerString : String
-    @State var timerDouble : Double
-    @EnvironmentObject var timerViewModel : TimerViewModel
-    
+    @EnvironmentObject var vm: TimerViewModel
+
+    @State private var name = ""
+    @State private var colorIndex = 0
+    @State private var seeded = false
+
+    private var isEditing: Bool { vm.editingPreset != nil }
+    private var trimmedName: String { name.trimmingCharacters(in: .whitespacesAndNewlines) }
+
     var body: some View {
-        VStack{
-            if #available(watchOSApplicationExtension 7.0, *) {
-                Text("Save timer")
-                    .font(.title2)
-                    .padding(.top,15)
-            } else {
-                // Fallback on earlier versions
-                Text("Save timer")
-                    .font(.system(size: 30.0))
-            }
-            HStack{
-                Text("Name :")
-                TextField("Enter name", text: $name)
-            }
-            HStack{
-                Text("Time   :")
-                TextField("", text: $timerString)
-            }
-            
-            Button(action: {
-                if self.name != "" && self.timerString != "" {
-                    timerViewModel.saveNewTimer(name: name, time: timerDouble)
+        ScrollView {
+            VStack(spacing: 14) {
+                Text(TimeFormat.clock(seconds: vm.selectedSeconds))
+                    .font(.dialNumber(36))
+                    .monospacedDigit()
+                    .foregroundStyle(.white)
+
+                TextField("savePreset.namePlaceholder", text: $name)
+                    .font(.system(.body, design: .rounded))
+                    .multilineTextAlignment(.center)
+
+                HStack(spacing: 7) {
+                    ForEach(0..<TimerPalette.count, id: \.self) { index in
+                        Circle()
+                            .fill(TimerPalette.color(index))
+                            .frame(width: 20, height: 20)
+                            .overlay(
+                                Circle().strokeBorder(.white, lineWidth: colorIndex == index ? 2.5 : 0)
+                            )
+                            .onTapGesture { colorIndex = index }
+                            .accessibilityLabel(Text("a11y.color \(index + 1)"))
+                            .accessibilityAddTraits(colorIndex == index ? [.isSelected] : [])
+                    }
                 }
-            }, label: {
-                Text("Save")
-            })
-            .overlay(RoundedRectangle (cornerRadius: 12)
-                .stroke(Color.white, lineWidth: 2))
-            .frame(width: 100, height: 20, alignment: .center)
-            .padding(.top,12)
+                .padding(.vertical, 2)
+
+                Button {
+                    vm.savePreset(name: name, colorIndex: colorIndex)
+                } label: {
+                    Text("action.save")
+                }
+                .buttonStyle(.pill(tint: TimerPalette.color(colorIndex), prominent: true))
+                .disabled(trimmedName.isEmpty || vm.selectedSeconds <= 0)
+                .opacity(trimmedName.isEmpty ? 0.45 : 1)
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 6)
+        }
+        .background(AppColor.background)
+        .navigationTitle(isEditing ? "savePreset.title.edit" : "savePreset.title.new")
+        .onAppear {
+            guard !seeded else { return }
+            name = vm.draftName
+            colorIndex = vm.draftColorIndex
+            seeded = true
         }
     }
 }
 
-struct SaveTimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group{
-            SaveTimerView(name: "", timerString: "2.00", timerDouble: 2.00)
-                .previewDevice("Apple Watch Series 6 - 44mm")
-            
-            SaveTimerView(name: "", timerString: "2.00", timerDouble: 2.00)
-                .previewDevice("Apple Watch Series 6 - 40mm")
-        }
-        .environmentObject(TimerViewModel())
-    }
+#Preview {
+    SaveTimerView()
+        .environmentObject({
+            let vm = TimerViewModel()
+            vm.selectedMinutes = 12
+            return vm
+        }())
 }
